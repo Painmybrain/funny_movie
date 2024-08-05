@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Grid Layout</title>
+    <link rel="stylesheet" href="./assets/style/normalize.css" />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <header class="header">Header</header>
+      <nav class="sidebar-left">
+        <h2>Sidebar Left</h2>
+        <form name="formOne">
+          <input type="email" name="firstEmail" placeholder="Введите email" />
+          <p id="errorMessage"></p>
+        </form>
+      </nav>
+      <main class="main">
+        <h2>Main Content</h2>
+        <form name="formThree">
+          <input type="text" name="thirdName" placeholder="Введите имя" />
+          <p id="practicum"></p>
+        </form>
+      </main>
+      <div class="widget">
+        <h2>Widget</h2>
+        <form class="form__input-container">
+          <input type="text" class="form__input" />
+          <input type="text" class="form__input" />
+        </form>
+      </div>
+      <div class="content-text">Основной текст</div>
+      <footer class="footer">Footer</footer>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

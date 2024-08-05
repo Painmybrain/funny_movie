@@ -1,0 +1,80 @@
+/* Нормализация стилей */
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.layout {
+    display: grid;
+    gap: 0.25rem;
+    grid-template-areas:
+        "header header"
+        "sidebar-left main"
+        "sidebar-left main"
+        "widget main"
+        "content-text content-text"
+        "footer footer";
+}
+
+.header {
+    grid-area: header;
+    background: #d08bfd;
+    padding: 1rem;
+    text-align: center;
+}
+
+.sidebar-left {
+    grid-area: sidebar-left;
+    background: #f6c356;
+    padding: 1rem;
+}
+
+.main {
+    grid-area: main;
+    background: #b0ee94;
+    padding: 1rem;
+}
+
+.widget {
+    grid-area: widget;
+    background: #ff7b7b;
+    padding: 1rem;
+}
+
+.content-text {
+    grid-area: content-text;
+    background: #8fc1e3;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.footer {
+    grid-area: footer;
+    background: #d08bfd;
+    padding: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .layout {
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar-left"
+            "widget"
+            "content-text"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .header, .main, .sidebar-left, .sidebar-right, .widget, .content-text, .footer {
+        padding: 0.5rem;
+    }
+}
