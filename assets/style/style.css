@@ -1,110 +1,75 @@
 /* Нормализация стилей */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body, html {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
 }
 
-.layout {
-    display: grid;
-    gap: 0.25rem;
-    grid-template-areas:
-        "header header"
-        "sidebar-left main"
-        "sidebar-left main"
-        "widget main"
-        "content-text content-text"
-        "footer footer";
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
 }
 
-.header {
-    grid-area: header;
-    background: #6a67ce;
-    color: #fff;
-    padding: 1rem;
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.header .logo {
-    height: 50px;
+.logo {
+    font-size: 24px;
 }
 
-.nav a {
+nav ul {
+    list-style-type: none;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
     color: #fff;
     text-decoration: none;
-    margin: 0 1rem;
-    transition: color 0.3s ease;
 }
 
-.nav a:hover {
-    color: #ffdd57;
-}
-
-.sidebar-left {
-    grid-area: sidebar-left;
-    background: #f6c356;
-    padding: 1rem;
-}
-
-.main {
-    grid-area: main;
-    background: #b0ee94;
-    padding: 1rem;
-}
-
-.widget {
-    grid-area: widget;
-    background: #ff7b7b;
-    padding: 1rem;
-}
-
-.content-text {
-    grid-area: content-text;
-    background: #8fc1e3;
-    padding: 2rem;
-    text-align: center;
-    font-size: 1.5rem;
-}
-
-.footer {
-    grid-area: footer;
-    background: #0b093b;
+#hero {
+    background-image: url("https://avatars.mds.yandex.net/i?id=5757a1883059dfb8019a19c6a8883289_l-5137607-images-thumbs&n=13");
+    background-size: cover;
     color: #fff;
-    padding: 1rem;
     text-align: center;
+    padding: 100px 0;
 }
 
-.footer .footer-content {
+.hero-text h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 18px;
+}
+
+.footer-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
 }
 
-.footer .footer-image {
+.footer-content .footer-image {
     height: 50px;
     margin-bottom: 1rem;
 }
 
-@media (max-width: 768px) {
-    .layout {
-        grid-template-areas:
-            "header"
-            "main"
-            "sidebar-left"
-            "widget"
-            "content-text"
-            "footer";
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-    }
-
-    .header, .main, .sidebar-left, .widget, .content-text, .footer {
-        padding: 0.5rem;
-    }
-}
