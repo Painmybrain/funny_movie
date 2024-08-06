@@ -23,9 +23,27 @@ body, html {
 
 .header {
     grid-area: header;
-    background: #d08bfd;
+    background: #6a67ce;
+    color: #fff;
     padding: 1rem;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header .logo {
+    height: 50px;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover {
+    color: #ffdd57;
 }
 
 .sidebar-left {
@@ -56,9 +74,21 @@ body, html {
 
 .footer {
     grid-area: footer;
-    background: #d08bfd;
+    background: #0b093b;
+    color: #fff;
     padding: 1rem;
     text-align: center;
+}
+
+.footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer .footer-image {
+    height: 50px;
+    margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
@@ -74,7 +104,7 @@ body, html {
         grid-template-rows: auto;
     }
 
-    .header, .main, .sidebar-left, .sidebar-right, .widget, .content-text, .footer {
+    .header, .main, .sidebar-left, .widget, .content-text, .footer {
         padding: 0.5rem;
     }
 }
