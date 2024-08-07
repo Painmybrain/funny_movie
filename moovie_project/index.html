@@ -3,21 +3,62 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fantasy Movies</title>
     <link rel="stylesheet" href="./style/style.css" />
-    <title></title>
+    <link
+      rel="icon"
+      href="./assets/pictures/atb_toplist.gif"
+      type="image/gif"
+    />
   </head>
   <body>
-    <!-- Блок по игре престолов -->
-    <div class="GOT__container">
-      <h2>Вселенная "Игры престолов"</h2>
-      <div class="GOT__quotes">
-        <div id="GOT__quotes--container"></div>
-        <button id="GOT__button" type="button">Другая цитата!</button>
-      </div>
-    </div>
+    <header>
+      <nav>
+        <div class="burger-menu" id="burger-menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#harry-potter">Harry Potter</a></li>
+          <li><a href="#lotr">Lord of the Rings</a></li>
+          <li><a href="#star-wars">Star Wars</a></li>
+          <li><a href="#gameofthones">Game of Thrones</a></li>
+          <li><a href="#team">Our Team</a></li>
+        </ul>
+      </nav>
+    </header>
 
-    <!-- СКРИПТЫ -->
-    <script type="module" src="/main.js"></script>
-    <script type="module" src="./gameOfThrones.js"></script>
+    <main>
+      <section id="home">
+        <h1>Welcome to Fantasy Movies</h1>
+        <p>
+          Explore the worlds of Harry Potter, Lord of the Rings, and Star Wars.
+        </p>
+      </section>
+      <section id="harry-potter">
+        <h2>Harry Potter</h2>
+        <p>Enter the magical world of Hogwarts.</p>
+      </section>
+      <section id="lotr">
+        <h2>Lord of the Rings</h2>
+        <p>Journey through Middle-earth.</p>
+      </section>
+      <section id="star-wars">
+        <h2>Star Wars</h2>
+        <p>Experience the epic space saga.</p>
+      </section>
+      <section id="team">
+        <h2>Our Team</h2>
+        <p>Meet the people behind this project.</p>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Fantasy Movies. All rights reserved.</p>
+    </footer>
+
+    <script src="./main.js"></script>
   </body>
 </html>
