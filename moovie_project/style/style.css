@@ -44,3 +44,50 @@
 #GOT__button:hover {
   background-color: rgb(233, 172, 19);
 }/*# sourceMappingURL=style.css.map */
+
+.HP__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.HP__quotes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  height: 7rem;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+#HP__quotes--container {
+  width: 100%;
+}
+
+.HPquote__sentence {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.HPquote__character {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+#HP__button {
+  cursor: pointer;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  background-color: goldenrod;
+  font-size: 15px;
+}
+
+#HP__button:hover {
+  background-color: rgb(233, 172, 19);
+}
