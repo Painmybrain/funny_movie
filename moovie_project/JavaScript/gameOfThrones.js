@@ -52,19 +52,19 @@ document.addEventListener("DOMContentLoaded", function () {
     "author": "George R. R. Martin",
     "year": "2000",
     "url": "./assets/images/GOT/book3.jpg",
-    "info": "Of the five contenders for power, one is dead, another in disfavor, and still the wars rage as violently as ever, as alliances are made and broken. Joffrey, of House Lannister, sits on the Iron Throne, the uneasy ruler of the land of the Seven Kingdoms. His most bitter rival, Lord Stannis, stands defeated and disgraced, the victim of the jealous sorceress who holds him in her evil thrall. But young Robb, of House Stark, still rules the North from the fortress of Riverrun. Robb plots against his despised Lannister enemies, even as they hold his sister hostage at King's Landing, the seat of the Iron Throne. Meanwhile, making her way across a blood-drenched continent is the exiled queen, Daenerys, mistress of the only three dragons still left in the world...<br> But as opposing forces maneuver for the final titanic showdown, an army of barbaric wildlings arrives from the outermost line of civilization. In their vanguard is a horde of mythical Others, a supernatural army of the living dead whose animated corpses are unstoppable. As the future of the land hangs in the balance, no one will rest until the Seven Kingdoms have exploded in a veritable storm of swords..."
+    "info": "Of the five contenders for power, one is dead, another in disfavor, and still the wars rage as violently as ever, as alliances are made and broken. Joffrey, of House Lannister, sits on the Iron Throne. His most bitter rival, Lord Stannis, stands defeated and disgraced. But young Robb, of House Stark, still rules the North from the fortress of Riverrun. Meanwhile, making her way across a blood-drenched continent is Daenerys, mistress of the only three dragons still left in the world... But as opposing forces, an army of barbaric wildlings arrives from the outermost line of civilization. In their vanguard is a horde of mythical Others, a supernatural army of the living dead whose animated corpses are unstoppable. As the future of the land hangs in the balance, no one will rest until the Seven Kingdoms have exploded in a veritable storm of swords..."
   }, {
     "title": "A Feast for Crows 🐦‍⬛",
     "author": "George R. R. Martin",
     "year": "2005",
     "url": "./assets/images/GOT/book4.jpg",
-    "info": "It seems too good to be true. After centuries of bitter strife and fatal treachery, the seven powers dividing the land have decimated one another into an uneasy truce. Or so it appears... With the death of the monstrous King Joffrey, Cersei is ruling as regent in King’s Landing. Robb Stark’s demise has broken the back of the Northern rebels, and his siblings are scattered throughout the kingdom like seeds on barren soil. Few legitimate claims to the once desperately sought Iron Throne still exist—or they are held in hands too weak or too distant to wield them effectively. The war, which raged out of control for so long, has burned itself out. <br> But as in the aftermath of any climactic struggle, it is not long before the survivors, outlaws, renegades, and carrion eaters start to gather, picking over the bones of the dead and fighting for the spoils of the soon-to-be dead. Now in the Seven Kingdoms, as the human crows assemble over a banquet of ashes, daring new plots and dangerous new alliances are formed, while surprising faces—some familiar, others only just appearing—are seen emerging from an ominous twilight of past struggles and chaos to take up the challenges ahead."
+    "info": "After centuries of bitter strife and fatal treachery, the seven powers dividing the land have decimated one another into an uneasy truce. Or so it appears... With the death of the monstrous King Joffrey, Cersei is ruling as regent in King’s Landing. Robb Stark’s demise has broken the back of the Northern rebels, and his siblings are scattered throughout the kingdom. Few legitimate claims to the once desperately sought Iron Throne still exist, or they are held in hands too weak or too distant to wield them effectively. The war, which raged out of control for so long, has burned itself out. Now in the Seven Kingdoms, as the human crows assemble over a banquet of ashes, daring new plots and dangerous new alliances are formed, while surprising faces—some familiar, others only just appearing—are seen emerging from an ominous twilight of past struggles and chaos to take up the challenges ahead."
   }, {
     "title": "A Dance with Dragons 🐉",
     "author": "George R. R. Martin",
     "year": "2011",
     "url": "./assets/images/GOT/book5.jpg",
-    "info": "In the aftermath of a colossal battle, the future of the Seven Kingdoms hangs in the balance once again - beset by newly emerging threats from every direction. In the east, Daenerys Targaryen, the last scion of House Targaryen, rules with her three dragons as queen of a city built on dust and death. But Daenerys has three times 3,000 enemies, and many have set out to find her. Yet, as they gather, one young man embarks upon his own quest for the queen, with an entirely different goal in mind. <br> To the north lies the mammoth Wall of ice and stone - a structure only as strong as those guarding it. There, Jon Snow, 998th Lord Commander of the Nights Watch, will face his greatest challenge yet. For he has powerful foes not only within the Watch but also beyond, in the land of the creatures of ice. <br> And from all corners, bitter conflicts soon reignite, intimate betrayals are perpetrated, and a grand cast of outlaws and priests, soldiers and skinchangers, nobles and slaves, will face seemingly insurmountable obstacles. Some will fail, others will grow in the strength of darkness. But in a time of rising restlessness, the tides of destiny and politics will lead inevitably to the greatest dance of all."
+    "info": "In the aftermath of a colossal battle, the future of the Seven Kingdoms hangs in the balance once again. In the east, Daenerys Targaryen rules with her three dragons as queen of a city built on dust and death. She has three times 3,000 enemies, and many have set out to find her. To the north lies the mammoth Wall of ice and stone - a structure only as strong as those guarding it. There, Jon Snow, 998th Lord Commander of the Nights Watch, will face his greatest challenge yet. Bitter conflicts soon reignite, intimate betrayals are perpetrated, and a grand cast of outlaws and priests, soldiers and skinchangers, nobles and slaves, will face seemingly insurmountable obstacles. Some will fail, others will grow in the strength of darkness. But in a time of rising restlessness, the tides of destiny and politics will lead inevitably to the greatest dance of all."
   }, {
     "title": "The Winds of Winter ❄️",
     "author": "George R. R. Martin",
@@ -85,19 +85,33 @@ document.addEventListener("DOMContentLoaded", function () {
     "info": "Tales of Dunk and Egg is a series of fantasy novellas by George R. R. Martin, set in the world of his A Song of Ice and Fire novels. They follow the adventures of Dunk (the future Lord Commander of the Kingsguard, Ser Duncan the Tall) and Egg (the future King Aegon V Targaryen), some 90 years before the events of the novels. <br> Three novellas have been published – The Hedge Knight (1998), The Sworn Sword (2003), and The Mystery Knight (2010) – and Martin has stated his intention to continue the series. A collection of the existing three novellas, with illustrations by Gary Gianni, was published as A Knight of the Seven Kingdoms on October 6, 2015."
   }
     ]`;
-
-  let GOTcards = JSON.parse(GOTcardsArray);
+  const GOTcardsContainer = document.getElementById("GOTcards__container");
+  const GOTcards = JSON.parse(GOTcardsArray);
   let GOTcardsContent = "";
 
   for (let card of GOTcards) {
-    GOTcardsContent += `<div class='GOTcard'>
-            <img class='GOTcard__image' src='${card.url}' alt='Book image'/>
-            <h3>${card.title}</h3>
-            <div class='GOTcard__text'>
-            <div><b>Author:</b> ${card.author}</div>
-            <div><b>Year:</b> ${card.year}</div>
-            </div>
-            </div>`;
+    GOTcardsContent += `
+    <div class='GOTcard'>
+      <div class='GOTcard__front'>
+        <img class='GOTcard__image' src='${card.url}' alt='Book image'/>
+        <div class='GOTcard__text'>
+          <p class='GOTcard__p'><b>Year:</b> ${card.year}</p>
+        </div>
+      </div>
+      <div class='GOTcard__back'>
+        <p class='GOTcard__p'>${card.info}</p>
+      </div>
+    </div>`;
   }
-  document.getElementById("GOTcards__container").innerHTML = GOTcardsContent;
+  GOTcardsContainer.innerHTML = GOTcardsContent;
+  // <p class='GOTcard__title'><b>${card.title}</b></p>
+  // <p class='GOTcard__p'><b>Author:</b> ${card.author}</p>
+  // переворот карточки
+  const cards = document.querySelectorAll(".GOTcard");
+
+  cards.forEach((card) => {
+    card.addEventListener("click", function () {
+      card.classList.toggle("flipped");
+    });
+  });
 });
