@@ -176,22 +176,53 @@ section {
 }
 
 
-
+// Блок по игре престолов
+// Цитаты
+.GOT__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.GOT__quotes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  height: 7rem;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+#GOT__quotes--container {
+  width: 100%;
+}
+.GOTquote__sentence {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
 .GOTquote__character {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 0.5rem;
   margin-right: 8rem;
 }
-
+#GOT__button {
+  cursor: pointer;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  background-color: goldenrod;
+  font-size: 15px;
+}
 #GOT__button:hover {
   background-color: rgb(233, 172, 19);
 }
-
+// карточки по книгам игра престолов
 h3 {
   text-align: center;
 }
-
 #GOTcards__container {
   display: flex;
   flex-direction: row;
@@ -200,7 +231,6 @@ h3 {
   justify-content: space-evenly;
   pad: 0.5rem;
 }
-
 .GOTcard {
   display: flex;
   flex-direction: column;
@@ -212,18 +242,65 @@ h3 {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease;
 }
-
 .GOTcard:hover {
   transform: scale(1.03);
 }
-
 .GOTcard__text {
   margin-bottom: 1rem;
   text-align: center;
 }
-
 .GOTcard__image {
   width: 100%;
   height: auto;
   border-radius: 10px;
-}/*# sourceMappingURL=style.css.map */
+}
+
+
+
+// harryPotter
+.HP__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.HP__quotes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 70%;
+  height: 7rem;
+  padding: 1rem;
+  margin: 0.5rem;
+}
+
+#HP__quotes--container {
+  width: 100%;
+}
+
+.HPquote__sentence {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.HPquote__character {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 0.5rem;
+}
+
+#HP__button {
+  cursor: pointer;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 25px;
+  background-color: goldenrod;
+  font-size: 15px;
+}
+
+#HP__button:hover {
+  background-color: rgb(233, 172, 19);
+}

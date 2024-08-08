@@ -29,6 +29,7 @@
         </ul>
       </nav>
     </header>
+    
     <main>
       <section id="home">
         <h1>Welcome to Fantasy Movies</h1>
@@ -36,18 +37,22 @@
           Explore the worlds of Harry Potter, Lord of the Rings, and Star Wars.
         </p>
       </section>
+      
       <section id="harry-potter">
         <h2>Harry Potter</h2>
         <p>Enter the magical world of Hogwarts.</p>
       </section>
+      
       <section id="lotr">
         <h2>Lord of the Rings</h2>
         <p>Journey through Middle-earth.</p>
       </section>
+      
       <section id="star-wars">
         <h2>Star Wars</h2>
         <p>Experience the epic space saga.</p>
       </section>
+      
       <!-- Блок по игре престолов -->
       <div class="GOT__container">
         <h2>World of A Song of Ice and Fire</h2>
@@ -58,6 +63,21 @@
         <h2>Books in the A Song of Ice and Fire series:</h2>
         <div id="GOTcards__container"></div>
       </div>
+
+      <!-- Блок по Гарри Поттеру -->
+    <div class="HP__container">
+      <h2>Вселенная "Гарри Поттер"</h2>
+      <div class="HP__quotes">
+        <div id="HP__quotes--container"></div>
+        <button id="HP__button" type="button">Другая цитата!</button>
+      </div>
+    </div>
+
+    <!-- СКРИПТЫ -->
+    <script type="module" src="/main.js"></script>
+    <script type="module" src="./gameOfThrones.js"></script>
+    <script type="module" src="./harryPotter.js"></script>
+
       <section id="team">
         <h2>Our Team</h2>
         <p>Meet the people behind this project.</p>
@@ -68,7 +88,5 @@
       <p>&copy; 2024 Fantasy Movies. All rights reserved.</p>
     </footer>
 
-    <script src="./main.js"></script>
-    <script src="./gameOfThrones.js"></script>
   </body>
 </html>
