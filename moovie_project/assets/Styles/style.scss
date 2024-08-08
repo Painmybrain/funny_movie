@@ -222,9 +222,13 @@ section {
   border-radius: 25px;
   background-color: goldenrod;
   font-size: 15px;
+  transition: transform 0.1s ease;
 }
 #GOT__button:hover {
   background-color: rgb(233, 172, 19);
+}
+#GOT__button:active {
+  transform: translateY(2px); //сдвинуть кнопку вниз при нажатии на 2px
 }
 // карточки по книгам игра престолов
 #GOTcards__container {
