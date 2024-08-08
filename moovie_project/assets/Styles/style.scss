@@ -1,5 +1,8 @@
+//в проекте неоходимо использовать препроцессор SCSS
+
+// HEADER
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #000;
   color: #fff;
 }
@@ -50,10 +53,12 @@ footer {
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   background-color: #000;
   color: #fff;
-  cursor: url('https://cybersoft.ru/uploads/posts/2021-04/thumbs/1618167045_videoshow.png') 0 0, auto; /* Добавляем кастомный курсор */
+  cursor: url("https://cybersoft.ru/uploads/posts/2021-04/thumbs/1618167045_videoshow.png")
+      0 0,
+    auto; /* Добавляем кастомный курсор */
 }
 
 header {
@@ -87,6 +92,7 @@ main {
   padding: 20px;
   text-align: center;
 }
+
 section {
   margin: 20px 0;
 }
@@ -99,7 +105,6 @@ footer {
   width: 100%;
   bottom: 0;
 }
-
 
 .burger-menu {
   display: none;
@@ -143,7 +148,6 @@ section {
   margin: 20px 0;
 }
 
-
 /* Responsive Styles */
 @media (max-width: 768px) {
   .burger-menu {
@@ -174,7 +178,6 @@ section {
     font-size: 24px;
   }
 }
-
 
 // Блок по игре престолов
 // Цитаты
@@ -254,8 +257,6 @@ h3 {
   height: auto;
   border-radius: 10px;
 }
-
-
 
 // harryPotter
 .HP__container {
