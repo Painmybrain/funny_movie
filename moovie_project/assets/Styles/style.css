@@ -550,7 +550,9 @@ section {
   text-align: center;
 }
 
-.LOTRcard__genres, .LOTRcard__year, .LOTRcard__about {
+.LOTRcard__genres,
+.LOTRcard__year,
+.LOTRcard__about {
   margin-bottom: 10px;
   text-align: left;
   font-size: 16px;
@@ -561,6 +563,8 @@ section {
   line-height: 1.5;
 }
 
-.LOTRcard__title, .LOTRcard__genres, .LOTRcard__year {
+.LOTRcard__title,
+.LOTRcard__genres,
+.LOTRcard__year {
   text-align: center;
 }/*# sourceMappingURL=style.css.map */
