@@ -299,49 +299,54 @@ section {
 }
 
 // harryPotter
-.HP__container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.HP__quotes {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  width: 70%;
-  height: 7rem;
-  padding: 1rem;
-  margin: 0.5rem;
-}
-
-#HP__quotes--container {
-  width: 100%;
-}
-
-.HPquote__sentence {
-  display: flex;
-  justify-content: center;
+.HP__container{
+  margin: 0px;
   text-align: center;
-  margin-bottom: 0.5rem;
-}
-
-.HPquote__character {
+  min-height: 100%;
   display: flex;
-  justify-content: flex-end;
-  margin-bottom: 0.5rem;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 40px;
+  
 }
 
-#HP__button {
-  cursor: pointer;
+
+.mid-container{
+  padding: 20px 15% 20px 15%;
+  align-self: center;
+}
+
+#HP__quote{
+  font-size: 11pt;
+  //font-weight: bold;
+}
+
+#author{
+  font-size: 12pt;
+  font-weight: bold;
+  font-style: italic;
+  float: right;
+  margin-top: 20px;
+  //margin-left: 40%;
+  margin-right: 20px;
+}
+
+.HP__button{
+  color: white; 
+  font-size: 18pt;
+  background: #3E0C10;
   border: none;
-  padding: 10px 25px;
-  border-radius: 25px;
-  background-color: goldenrod;
-  font-size: 15px;
+  padding: 10px 15px;
+  border-radius: 3px;
+font-family: 'Walter Turncoat';  text-decoration: none;
+  cursor: pointer;
 }
 
-#HP__button:hover {
-  background-color: rgb(233, 172, 19);
+.HP__button:hover{
+  color: #3E0C10;
+  background: transparent;
+  padding: 8px 13px;
+  border: 2px solid #c51120;
 }
+
