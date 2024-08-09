@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="./assets/Styles/normalize.css" />
     <link rel="stylesheet" href="./assets/Styles/style.css" />
     <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link
       rel="icon"
       href="./assets/images/Header/atb_toplist.gif"
       type="image/gif"
@@ -55,24 +59,62 @@
         </div>
       </section>
 
+      <!--Блок по Властелину Колец-->
       <section id="lotr">
         <h2>Lord of the Rings</h2>
         <p>Journey through Middle-earth.</p>
+        <div id="container">
+          <div id="character-container"></div>
+          <button type="submit" id="lotr__button">My precious</button>
+        </div>
+        <div>
+          <h2 id="cards-title">
+            How to watch The Lord of the Rings and The Hobbit movies in order
+          </h2>
+          <div id="LOTRcards_container">
+            <button id="prevButton" class="nav-button">&lt;</button>
+            <div id="cards-wrapper" class="cards-wrapper">
+              <div class="card-container">
+                <img class="LOTRcard__image" src="" alt="Movie image"/>
+                <h3 class="LOTRcard__title"></h3>
+                <div class="LOTRcard__genres"></div>
+                <div class="LOTRcard__year"></div>
+              </div>
+            </div>
+            <button id="nextButton" class="nav-button">&gt;</button>
+          </div>          
       </section>
 
       <!-- Блок по игре престолов -->
-      <section id="gameofthones">
-        <h2>Game of Thrones</h2>
-        <p>World of A Song of Ice and Fire</p>
-        <div class="GOT__container">
-          <div class="GOT__quotes">
-            <div id="GOT__quotes--container"></div>
-            <button id="GOT__button" type="button">Another quote!</button>
-          </div>
-          <h3>Books in the A Song of Ice and Fire series:</h3>
-          <div id="GOTcards__container"></div>
-        </div>
-      </section>
+<section id="gameofthones">
+  <div class="GOT__container"></div>
+  <div class="GOTtvSeries_logoContainer">
+  <img
+  class="GOTtvSeries_logo"
+  src="./assets/images/GOT/Game_of_Thrones_2011_logo.svg"
+  alt=""
+  />
+  <h3>World of A Song of Ice and Fire</h3>
+  </div>
+   
+  <div class="GOT__quotes">
+  <div id="GOT__quotes--container"></div>
+  <button id="GOT__button" type="button">Another quote!</button>
+  </div>
+  <h3>Books in the A Song of Ice and Fire series</h3>
+  <div id="GOTcards__container"></div>
+  <div class="GOTtvSeries">
+  <h3>TV series episodes</h3>
+   
+  <div id="GOTtvSeries__container"></div>
+  </div>
+  </div>
+  </section>
+   
+  <section id="star-wars">
+  <h2>Star Wars</h2>
+  <p>Experience the epic space saga.</p>
+  </section>
 
       <section id="star-wars">
         <h2>Star Wars</h2>
@@ -96,5 +138,10 @@
     <script type="module" src="./JavaScript/gameOfThrones.js"></script>
     <script type="module" src="./JavaScript/harryPotter.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="module" src="./JavaScript/lotr.js"></script>
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"
+    ></script>
   </body>
 </html>
