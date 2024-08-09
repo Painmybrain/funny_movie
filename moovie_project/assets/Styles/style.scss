@@ -181,6 +181,12 @@ section {
 
 // Блок по игре престолов
 // Цитаты
+#gameofthones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .GOT__container {
   width: 100%;
   display: flex;
@@ -239,7 +245,7 @@ section {
   gap: 1.5rem;
   justify-content: space-evenly;
   padding: 0.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 0.5rem;
 }
 .GOTcard {
   display: flex;
