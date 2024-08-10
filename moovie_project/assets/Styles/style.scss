@@ -187,6 +187,8 @@ section {
   justify-content: center;
   align-items: center;
   color: whitesmoke;
+  padding: 0.3rem;
+  margin: 0.3rem;
 }
 .GOTtvSeries_logoContainer {
   width: 45rem;
@@ -269,6 +271,7 @@ section {
   width: 18rem;
   height: 29.5rem;
   padding: 0.3rem;
+  margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -319,44 +322,117 @@ section {
   transform: rotateY(0deg); //Поднимаем заднюю сторону
 }
 // сериал игра престолов
-.GOTtvSeries {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
-}
-.GOTtvSeries__box {
-  border: 2px solid rgb(238, 176, 19);
-  border-radius: 10px;
+// .GOTtvSeries {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 0.5rem;
+// }
+// .GOTtvSeries__box {
+//   border: 2px solid rgb(238, 176, 19);
+//   border-radius: 10px;
+//   display: flex;
+//   flex-direction: row;
+//   padding: 0.5rem;
+//   margin: 1rem;
+//   transition: transform 0.3s ease;
+// }
+// .GOTtvSeries__box:hover {
+//   transform: scale(1.03);
+// }
+// .GOTtvSeries_img {
+//   width: 15rem;
+//   border-radius: 10px;
+// }
+// .GOTtvSeries_imgContainer {
+//   margin-right: 1rem;
+// }
+// .GOTtvSeries_textContainer {
+//   padding: 0.5rem;
+// }
+// .GOTtvSeries__title {
+//   font-size: 1.2rem;
+// }
+// .GOTtvSeries__p {
+//   font-size: 1rem;
+// }
+// .GOTtvSeries__a {
+//   color: rgb(238, 176, 19);
+//   text-decoration: none;
+// }
+#GOTtvSeries__container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-evenly;
   padding: 0.5rem;
-  margin: 1rem;
+  margin-bottom: 0.5rem;
+}
+.GOT__a {
+  color: rgb(238, 176, 19);
+  text-decoration: none;
+}
+.GOTtvSeries__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18rem;
+  height: 27rem;
+  padding: 0.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
   transition: transform 0.3s ease;
+  // для переворота карточки
+  position: relative;
 }
 .GOTtvSeries__box:hover {
   transform: scale(1.03);
 }
-.GOTtvSeries_img {
-  width: 15rem;
-  border-radius: 10px;
-}
-.GOTtvSeries_imgContainer {
-  margin-right: 1rem;
-}
-.GOTtvSeries_textContainer {
-  padding: 0.5rem;
+.GOTtvSeries__text {
+  text-align: center;
 }
 .GOTtvSeries__title {
   font-size: 1.2rem;
 }
 .GOTtvSeries__p {
-  font-size: 1rem;
+  font-size: 0.8rem;
+  padding: 0.3rem;
 }
-.GOTtvSeries__a {
-  color: rgb(238, 176, 19);
-  text-decoration: none;
+.GOTtvSeries_img {
+  padding-top: 0.3rem;
+  width: 93%;
+  height: auto;
+  border-radius: 10px;
+}
+.GOTTtvSeries__front,
+.GOTTtvSeries__back {
+  padding: 0.3rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; //Скрытие задней стороны
+  transition: transform 0.6s;
+}
+.GOTTtvSeries__front {
+  background-color: black; //Цвет фона передней стороны
+  border: 2px solid rgb(238, 176, 19);
+  border-radius: 10px;
+}
+.GOTTtvSeries__back {
+  background-color: black; //Цвет фона задней стороны
+  border: 2px solid rgb(238, 176, 19);
+  border-radius: 10px;
+  transform: rotateY(180deg); //Поворачиваем заднюю сторону
+  overflow: hidden;
+}
+.GOTtvSeries__box.flipped .GOTTtvSeries__front {
+  transform: rotateY(180deg); //Поворачиваем переднюю сторону при нажатии
+}
+.GOTtvSeries__box.flipped .GOTTtvSeries__back {
+  transform: rotateY(0deg); //Поднимаем заднюю сторону
 }
 
 // harryPotter
