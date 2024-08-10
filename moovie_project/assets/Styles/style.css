@@ -176,6 +176,23 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: whitesmoke;
+}
+
+.GOTtvSeries_logoContainer {
+  width: 45rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.GOTtvSeries_logo {
+  padding-top: 0.5rem;
+  width: 100%;
+}
+
+.GOT_h3 {
+  font-size: 1.7rem;
 }
 
 .GOT__container {
@@ -207,12 +224,14 @@ section {
   justify-content: center;
   text-align: center;
   margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 
 .GOTquote__character {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 0.5rem;
+  font-size: 1rem;
 }
 
 #GOT__button {
@@ -221,7 +240,7 @@ section {
   padding: 10px 25px;
   border-radius: 25px;
   background-color: rgb(238, 176, 19);
-  font-size: 15px;
+  font-size: 1.2rem;
   transition: transform 0.1s ease;
 }
 
@@ -247,8 +266,8 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 215px;
-  height: 365px;
+  width: 18rem;
+  height: 29.5rem;
   padding: 0.3rem;
   margin-bottom: 1.5rem;
   border-radius: 10px;
@@ -264,12 +283,8 @@ section {
   text-align: center;
 }
 
-.GOTcard__title {
-  font-size: 15px;
-}
-
 .GOTcard__p {
-  font-size: 12px;
+  font-size: 1rem;
   padding: 0.3rem;
 }
 
@@ -320,18 +335,6 @@ section {
   padding: 0.5rem;
 }
 
-.GOTtvSeries_logoContainer {
-  width: 70%;
-  padding: 0.5rem;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
-.GOTtvSeries_logo {
-  padding-top: 0.5rem;
-  width: 100%;
-}
-
 .GOTtvSeries__box {
   border: 2px solid rgb(238, 176, 19);
   border-radius: 10px;
@@ -347,7 +350,7 @@ section {
 }
 
 .GOTtvSeries_img {
-  width: 200px;
+  width: 15rem;
   border-radius: 10px;
 }
 
@@ -359,8 +362,12 @@ section {
   padding: 0.5rem;
 }
 
+.GOTtvSeries__title {
+  font-size: 1.2rem;
+}
+
 .GOTtvSeries__p {
-  font-size: 14px;
+  font-size: 1rem;
 }
 
 .GOTtvSeries__a {
