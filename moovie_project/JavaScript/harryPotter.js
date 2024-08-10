@@ -16,3 +16,19 @@ $(document).ready(function(){
     generateQuote();
   });
 });
+//Герои 
+const apiURL = "https://harry-potter-api-en.onrender.com/db";
+
+fetch(apiURL).then((res) => res.json()).then((data) => {
+    console.log(data.characters)
+
+    data.characters.forEach(element => 
+        document.getElementById("HP__characters").innerHTML += 
+            '<div id="HP_character">' +
+            '<img src="' + element.image + '" width="200px" height"100px">' +
+            '<div id="name">' + element.character + '</div>') +
+            '</div>'
+}).catch((error) => console.log(error));
+
+//Книги
+

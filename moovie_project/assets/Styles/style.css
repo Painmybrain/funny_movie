@@ -418,6 +418,22 @@ section {
   border: 2px solid #c51120;
 }
 
+#HP__characters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 60%;
+  padding: 0, 5 rem;
+  margin-left: 25rem;
+}
+
+#HP_character {
+  border: 10px solid black;
+  margin: 0.375rem;
+  text-align: center;
+}
+
 /* Властелин колец */
 /* Swiper CSS */
 .swiper-container {
