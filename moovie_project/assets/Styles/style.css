@@ -220,13 +220,13 @@ section {
   border: none;
   padding: 10px 25px;
   border-radius: 25px;
-  background-color: goldenrod;
+  background-color: rgb(238, 176, 19);
   font-size: 15px;
   transition: transform 0.1s ease;
 }
 
 #GOT__button:hover {
-  background-color: rgb(233, 172, 19);
+  background-color: rgb(241, 188, 52);
 }
 
 #GOT__button:active {
@@ -292,13 +292,13 @@ section {
 
 .GOTcard__front {
   background-color: black;
-  border: 2px solid goldenrod;
+  border: 2px solid rgb(238, 176, 19);
   border-radius: 10px;
 }
 
 .GOTcard__back {
   background-color: black;
-  border: 2px solid goldenrod;
+  border: 2px solid rgb(238, 176, 19);
   border-radius: 10px;
   transform: rotateY(180deg);
   overflow: hidden;
@@ -321,11 +321,8 @@ section {
 }
 
 .GOTtvSeries_logoContainer {
-  background-color: white;
   width: 70%;
-  color: black;
   padding: 0.5rem;
-  border: 2px solid goldenrod;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
@@ -336,7 +333,7 @@ section {
 }
 
 .GOTtvSeries__box {
-  border: 2px solid goldenrod;
+  border: 2px solid rgb(238, 176, 19);
   border-radius: 10px;
   display: flex;
   flex-direction: row;
@@ -367,7 +364,7 @@ section {
 }
 
 .GOTtvSeries__a {
-  color: goldenrod;
+  color: rgb(238, 176, 19);
   text-decoration: none;
 }
 

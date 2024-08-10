@@ -227,12 +227,12 @@ section {
   border: none;
   padding: 10px 25px;
   border-radius: 25px;
-  background-color: goldenrod;
+  background-color: rgb(238, 176, 19);
   font-size: 15px;
   transition: transform 0.1s ease;
 }
 #GOT__button:hover {
-  background-color: rgb(233, 172, 19);
+  background-color: rgb(241, 188, 52);
 }
 #GOT__button:active {
   transform: translateY(2px); //сдвинуть кнопку вниз при нажатии на 2px
@@ -290,12 +290,12 @@ section {
 }
 .GOTcard__front {
   background-color: black; //Цвет фона передней стороны
-  border: 2px solid goldenrod;
+  border: 2px solid rgb(238, 176, 19);
   border-radius: 10px;
 }
 .GOTcard__back {
   background-color: black; //Цвет фона задней стороны
-  border: 2px solid goldenrod;
+  border: 2px solid rgb(238, 176, 19);
   border-radius: 10px;
   transform: rotateY(180deg); //Поворачиваем заднюю сторону
   overflow: hidden;
@@ -315,11 +315,11 @@ section {
   padding: 0.5rem;
 }
 .GOTtvSeries_logoContainer {
-  background-color: white;
+  // background-color: white;
   width: 70%;
-  color: black;
+  // color: black;
   padding: 0.5rem;
-  border: 2px solid goldenrod;
+  // border: 2px solid goldenrod;
   border-radius: 10px;
   margin-bottom: 1rem;
 }
@@ -328,7 +328,7 @@ section {
   width: 100%;
 }
 .GOTtvSeries__box {
-  border: 2px solid goldenrod;
+  border: 2px solid rgb(238, 176, 19);
   border-radius: 10px;
   display: flex;
   flex-direction: row;
@@ -353,7 +353,7 @@ section {
   font-size: 14px;
 }
 .GOTtvSeries__a {
-  color: goldenrod;
+  color: rgb(238, 176, 19);
   text-decoration: none;
 }
 
@@ -562,7 +562,6 @@ section {
   text-align: center;
 }
 
-
 // Star Wars
 
 #star-wars {
@@ -572,7 +571,7 @@ section {
   align-items: center;
 }
 
-.sw_quotes_container {  
+.sw_quotes_container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -583,7 +582,7 @@ section {
   margin: 0.5rem;
 }
 
-.sw_quotes__author {  
+.sw_quotes__author {
   margin-left: auto;
   font-style: italic;
 }
