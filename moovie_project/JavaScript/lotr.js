@@ -155,3 +155,68 @@ document.addEventListener("DOMContentLoaded", function () {
     updateCard();
   });
 });
+
+
+const books = [
+  { title: "The Hobbit", year: "1937", image: "/moovie_project/assets/images/LOTR/hobbit.jpg" },
+  { title: "The Fellowship of the Ring", year: "1954", image: "/moovie_project/assets/images/LOTR/fellowship.jpg" },
+  { title: "The Two Towers", year: "1954", image: "/moovie_project/assets/images/LOTR/two_towers.jpg" },
+  { title: "The Return of the King", year: "1955", image: "/moovie_project/assets/images/LOTR/return.jpg" },
+  { title: "The Silmarillion", year: "1977", image: "/moovie_project/assets/images/LOTR/silmarillion.jpg" },
+  { title: "Unfinished Tales of Numenor and Middle-earth", year: "1980", image: "/moovie_project/assets/images/LOTR/unfinished.jpg" },
+  { title: "The Children of Hurin", year: "2007", image: "/moovie_project/assets/images/LOTR/children.jpg" },
+  { title: "Beren and Luthien", year: "2017", image: "/moovie_project/assets/images/LOTR/beren.jpg" },
+  { title: "The Fall of Gondolin", year: "2018", image: "/moovie_project/assets/images/LOTR/fall.jpg" },
+];
+
+const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+        books.forEach(book => {
+            const slide = document.createElement('div');
+            slide.classList.add('swiper-slide');
+
+            const img = document.createElement('img');
+            img.src = book.image;
+            img.alt = book.title;
+
+            const title = document.createElement('div');
+            title.classList.add('book-title');
+            title.textContent = book.title;
+
+            const year = document.createElement('div');
+            year.classList.add('book-year');
+            year.textContent = `Published: ${book.year}`;
+
+            slide.appendChild(img);
+            slide.appendChild(title);
+            slide.appendChild(year);
+            swiperWrapper.appendChild(slide);
+        });
+
+        const swiper = new Swiper('.swiper-container', {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          loop: true,
+          breakpoints: {
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 30,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 30,
+            },
+          },
+        });
