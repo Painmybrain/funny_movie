@@ -12,6 +12,17 @@ header {
   padding: 10px 0;
 }
 
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  width: 50px;
+  height: auto;
+}
+
 nav ul {
   list-style-type: none;
   display: flex;
@@ -109,8 +120,13 @@ footer {
 .burger-menu {
   display: none;
   flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
   cursor: pointer;
   z-index: 1001;
+  margin-top: 10px; /* Отступ сверху */
+  margin-right: 15px; /* Отступ справа */
 }
 
 .burger-menu span {
@@ -146,6 +162,24 @@ main {
 
 section {
   margin: 20px 0;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 75px; /* Поднимаем кнопку выше на 60px от нижней границы окна */
+  right: 20px;
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000; /* Убедитесь, что кнопка отображается поверх других элементов */
+}
+
+.back-to-top:hover {
+  background-color: rgb(233, 172, 19);
 }
 
 /* Responsive Styles */
