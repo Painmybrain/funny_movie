@@ -18,6 +18,17 @@ header {
   padding: 10px 0;
 }
 
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  width: 50px;
+  height: auto;
+}
+
 nav ul {
   list-style-type: none;
   display: flex;
@@ -115,8 +126,13 @@ footer {
 .burger-menu {
   display: none;
   flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
   cursor: pointer;
   z-index: 1001;
+  margin-top: 10px; /* Отступ сверху */
+  margin-right: 15px; /* Отступ справа */
 }
 
 .burger-menu span {
@@ -152,6 +168,24 @@ main {
 
 section {
   margin: 20px 0;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 75px; /* Поднимаем кнопку выше на 60px от нижней границы окна */
+  right: 20px;
+  background-color: #ffd700;
+  color: #000;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: none;
+  z-index: 1000; /* Убедитесь, что кнопка отображается поверх других элементов */
+}
+
+.back-to-top:hover {
+  background-color: rgb(233, 172, 19);
 }
 
 /* Responsive Styles */
@@ -192,6 +226,22 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: whitesmoke;
+  padding: 0.3rem;
+  margin: 0.3rem;
+}
+.GOTtvSeries_logoContainer {
+  width: 45rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+.GOTtvSeries_logo {
+  padding-top: 0.5rem;
+  width: 100%;
+}
+.GOT_h3 {
+  font-size: 1.7rem;
 }
 .GOT__container {
   width: 100%;
@@ -221,24 +271,25 @@ section {
   justify-content: center;
   text-align: center;
   margin-bottom: 0.5rem;
+  font-size: 1.2rem;
 }
 .GOTquote__character {
   display: flex;
   justify-content: flex-end;
   margin-bottom: 0.5rem;
-  // margin-right: 8rem;
+  font-size: 1rem;
 }
 #GOT__button {
   cursor: pointer;
   border: none;
   padding: 10px 25px;
   border-radius: 25px;
-  background-color: goldenrod;
-  font-size: 15px;
+  background-color: rgb(238, 176, 19);
+  font-size: 1.2rem;
   transition: transform 0.1s ease;
 }
 #GOT__button:hover {
-  background-color: rgb(233, 172, 19);
+  background-color: rgb(241, 188, 52);
 }
 #GOT__button:active {
   transform: translateY(2px); //сдвинуть кнопку вниз при нажатии на 2px
@@ -257,9 +308,10 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 215px;
-  height: 365px;
+  width: 18rem;
+  height: 29.5rem;
   padding: 0.3rem;
+  margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -272,11 +324,8 @@ section {
 .GOTcard__text {
   text-align: center;
 }
-.GOTcard__title {
-  font-size: 15px;
-}
 .GOTcard__p {
-  font-size: 12px;
+  font-size: 1rem;
   padding: 0.3rem;
 }
 .GOTcard__image {
@@ -296,12 +345,12 @@ section {
 }
 .GOTcard__front {
   background-color: black; //Цвет фона передней стороны
-  border: 2px solid goldenrod;
+  border: 2px solid rgb(238, 176, 19);
   border-radius: 10px;
 }
 .GOTcard__back {
   background-color: black; //Цвет фона задней стороны
-  border: 2px solid goldenrod;
+  border: 2px solid rgb(238, 176, 19);
   border-radius: 10px;
   transform: rotateY(180deg); //Поворачиваем заднюю сторону
   overflow: hidden;
@@ -313,54 +362,117 @@ section {
   transform: rotateY(0deg); //Поднимаем заднюю сторону
 }
 // сериал игра престолов
-.GOTtvSeries {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0.5rem;
-}
-.GOTtvSeries_logoContainer {
-  background-color: white;
-  width: 70%;
-  color: black;
-  padding: 0.5rem;
-  border: 2px solid goldenrod;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-.GOTtvSeries_logo {
-  padding-top: 0.5rem;
-  width: 100%;
-}
-.GOTtvSeries__box {
-  border: 2px solid goldenrod;
-  border-radius: 10px;
+// .GOTtvSeries {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 0.5rem;
+// }
+// .GOTtvSeries__box {
+//   border: 2px solid rgb(238, 176, 19);
+//   border-radius: 10px;
+//   display: flex;
+//   flex-direction: row;
+//   padding: 0.5rem;
+//   margin: 1rem;
+//   transition: transform 0.3s ease;
+// }
+// .GOTtvSeries__box:hover {
+//   transform: scale(1.03);
+// }
+// .GOTtvSeries_img {
+//   width: 15rem;
+//   border-radius: 10px;
+// }
+// .GOTtvSeries_imgContainer {
+//   margin-right: 1rem;
+// }
+// .GOTtvSeries_textContainer {
+//   padding: 0.5rem;
+// }
+// .GOTtvSeries__title {
+//   font-size: 1.2rem;
+// }
+// .GOTtvSeries__p {
+//   font-size: 1rem;
+// }
+// .GOTtvSeries__a {
+//   color: rgb(238, 176, 19);
+//   text-decoration: none;
+// }
+#GOTtvSeries__container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: space-evenly;
   padding: 0.5rem;
-  margin: 1rem;
+  margin-bottom: 0.5rem;
+}
+.GOT__a {
+  color: rgb(238, 176, 19);
+  text-decoration: none;
+}
+.GOTtvSeries__box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 18rem;
+  height: 27rem;
+  padding: 0.3rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 10px;
   transition: transform 0.3s ease;
+  // для переворота карточки
+  position: relative;
 }
 .GOTtvSeries__box:hover {
   transform: scale(1.03);
 }
-.GOTtvSeries_img {
-  width: 200px;
-  border-radius: 10px;
+.GOTtvSeries__text {
+  text-align: center;
 }
-.GOTtvSeries_imgContainer {
-  margin-right: 1rem;
-}
-.GOTtvSeries_textContainer {
-  padding: 0.5rem;
+.GOTtvSeries__title {
+  font-size: 1.2rem;
 }
 .GOTtvSeries__p {
-  font-size: 14px;
+  font-size: 0.8rem;
+  padding: 0.3rem;
 }
-.GOTtvSeries__a {
-  color: goldenrod;
-  text-decoration: none;
+.GOTtvSeries_img {
+  padding-top: 0.3rem;
+  width: 93%;
+  height: auto;
+  border-radius: 10px;
+}
+.GOTTtvSeries__front,
+.GOTTtvSeries__back {
+  padding: 0.3rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; //Скрытие задней стороны
+  transition: transform 0.6s;
+}
+.GOTTtvSeries__front {
+  background-color: black; //Цвет фона передней стороны
+  border: 2px solid rgb(238, 176, 19);
+  border-radius: 10px;
+}
+.GOTTtvSeries__back {
+  background-color: black; //Цвет фона задней стороны
+  border: 2px solid rgb(238, 176, 19);
+  border-radius: 10px;
+  transform: rotateY(180deg); //Поворачиваем заднюю сторону
+  overflow: hidden;
+}
+.GOTtvSeries__box.flipped .GOTTtvSeries__front {
+  transform: rotateY(180deg); //Поворачиваем переднюю сторону при нажатии
+}
+.GOTtvSeries__box.flipped .GOTTtvSeries__back {
+  transform: rotateY(0deg); //Поднимаем заднюю сторону
 }
 
 // harryPotter
@@ -660,7 +772,7 @@ section {
   align-items: center;
 }
 
-.sw_quotes_container {  
+.sw_quotes_container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -671,7 +783,7 @@ section {
   margin: 0.5rem;
 }
 
-.sw_quotes__author {  
+.sw_quotes__author {
   margin-left: auto;
   font-style: italic;
 }

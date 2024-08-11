@@ -108,7 +108,8 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class='GOTcard__back'>
 <p class='GOTcard__p'>${card.info}</p>
 </div>
-</div>`;
+</div>
+`;
   }
   GOTcardsContainer.innerHTML = GOTcardsContent;
   // <p class='GOTcard__title'><b>${card.title}</b></p>
@@ -187,19 +188,43 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let TVseriesContent = "";
 
+  //   for (let episod of TVseries) {
+  //     TVseriesContent += `
+  // <div class='GOTtvSeries__box'>
+  // <div class="GOTtvSeries_imgContainer">
+  // <img class='GOTtvSeries_img' src='${episod.image}' alt='TV series poster'/>
+  // </div>
+  // <div class="GOTtvSeries_textContainer">
+  // <p class='GOTtvSeries__title'><b>${episod.title}</b></p>
+  // <p class='GOTtvSeries__p'>${episod.info}</p>
+  // <a class='GOTtvSeries__a' href="${episod.url}" target="_blank">Whatch TV series on amediateka.ru</a>
+  // </div>
+  // </div>
+  // `;
+  //   }
+
   for (let episod of TVseries) {
     TVseriesContent += `
 <div class='GOTtvSeries__box'>
-<div class="GOTtvSeries_imgContainer">
-<img class='GOTtvSeries_img' src='${episod.image}' alt='TV series poster'/>
+<div class='GOTTtvSeries__front'>
+  <img class='GOTtvSeries_img' src='${episod.image}' alt='TV Series image'/>
+  <div class='GOTtvSeries__text'>
+    <p class='GOTtvSeries__title'><b>${episod.title}</b></p>
+  </div>
 </div>
-<div class="GOTtvSeries_textContainer">
-<p class='GOTtvSeries__title'><b>${episod.title}</b></p>
-<p class='GOTtvSeries__p'>${episod.info}</p>
-<a class='GOTtvSeries__a' href="${episod.url}" target="_blank">Whatch TV series on amediateka.ru</a>
+<div class='GOTTtvSeries__back'>
+  <p class='GOTtvSeries__p'>${episod.info}</p>
 </div>
 </div>
 `;
   }
   TVseriesContainer.innerHTML = TVseriesContent;
+
+  const TVseriesflip = document.querySelectorAll(".GOTtvSeries__box");
+
+  TVseriesflip.forEach((element) => {
+    element.addEventListener("click", function () {
+      element.classList.toggle("flipped");
+    });
+  });
 });
