@@ -18,20 +18,27 @@
   </head>
   <body>
     <header>
-      <nav>
-        <div class="burger-menu" id="burger-menu">
-          <span></span>
-          <span></span>
-          <span></span>
+       <nav>
+        <div class="nav-container">
+          <img
+            src="./assets/images/Header/dataset-card.png"
+            alt="Logo"
+            class="header-logo"
+          />
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#harry-potter">Harry Potter</a></li>
+            <li><a href="#lotr">Lord of the Rings</a></li>
+            <li><a href="#gameofthones">Game of Thrones</a></li>
+            <li><a href="#star-wars">Star Wars</a></li>
+            <li><a href="#team">Our Team</a></li>
+          </ul>
+          <div class="burger-menu" id="burger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#harry-potter">Harry Potter</a></li>
-          <li><a href="#lotr">Lord of the Rings</a></li>
-          <li><a href="#gameofthones">Game of Thrones</a></li>
-          <li><a href="#star-wars">Star Wars</a></li>
-          <li><a href="#team">Our Team</a></li>
-        </ul>
       </nav>
     </header>
 
@@ -145,18 +152,14 @@
   
   </section>
 
-  <!-- Our Team -->
-  <section id="team">
-        <h2>Our Team</h2>
-        <p>Meet the people behind this project.</p>
-      </section>
-    </main>
-
     <!-- Footer -->
     <footer>
       <p>&copy; 2024 Fantasy Movies. All rights reserved.</p>
     </footer>
 
+       <!-- Кнопка "Наверх" -->
+    <button id="back-to-top" class="back-to-top">↑ Наверх</button>
+      
     <!-- СКРИПТЫ -->
     <script type="module" src="./JavaScript/header.burger.js"></script>
     <script type="module" src="./JavaScript/gameOfThrones.js"></script>
