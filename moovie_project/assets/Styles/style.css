@@ -220,6 +220,8 @@ section {
   color: whitesmoke;
   padding: 0.3rem;
   margin: 0.3rem;
+  max-width: 1350px;
+  margin: 0 auto;
 }
 
 .GOTtvSeries_logoContainer {
@@ -277,7 +279,7 @@ section {
   font-size: 1rem;
 }
 
-#GOT__button {
+.GOT__buttons__style {
   cursor: pointer;
   border: none;
   padding: 10px 25px;
@@ -287,11 +289,11 @@ section {
   transition: transform 0.1s ease;
 }
 
-#GOT__button:hover {
+.GOT__buttons__style:hover {
   background-color: rgb(241, 188, 52);
 }
 
-#GOT__button:active {
+.GOT__buttons__style:active {
   transform: translateY(2px);
 }
 
@@ -312,7 +314,7 @@ section {
   width: 18rem;
   height: 29.5rem;
   padding: 0.3rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -382,8 +384,13 @@ section {
 }
 
 .GOT__a {
-  color: rgb(238, 176, 19);
+  color: whitesmoke;
   text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.GOT__a:hover {
+  color: rgb(238, 176, 19);
 }
 
 .GOTtvSeries__box {
@@ -393,7 +400,7 @@ section {
   width: 18rem;
   height: 27rem;
   padding: 0.3rem;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   margin-bottom: 1.5rem;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -454,6 +461,36 @@ section {
 
 .GOTtvSeries__box.flipped .GOTTtvSeries__back {
   transform: rotateY(0deg);
+}
+
+#GOT__characters__mainContainer {
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.GOTchar_img,
+.GOTcharDownload {
+  height: 300px;
+  border: 2px solid rgb(238, 176, 19);
+  border-radius: 10px;
+}
+
+.GOTcharDownload {
+  width: 200px;
+  display: flex;
+}
+
+.GOTchar_p {
+  font-size: 1rem;
+  padding: 0.3rem;
+}
+
+.GOTchar_text {
+  margin: 1.5rem;
 }
 
 .HP__container {

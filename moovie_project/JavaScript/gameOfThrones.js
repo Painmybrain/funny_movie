@@ -1,5 +1,5 @@
 // Блок с цитатами по игре престолов
-const quotesContainer = document.getElementById("GOT__quotes--container");
+const GOTquotesContainer = document.getElementById("GOT__quotes--container");
 const GOTbutton = document.getElementById("GOT__button");
 
 document.addEventListener("DOMContentLoaded", getGOTquotes);
@@ -19,12 +19,12 @@ async function getGOTquotes() {
     const GOTdata = await GOTfetch.json();
     displayQuotes(GOTdata);
   } catch (error) {
-    quotesContainer.innerHTML = `<p>Ошибка: ${error.message}</p>`;
+    GOTquotesContainer.innerHTML = `<p>Ошибка: ${error.message}</p>`;
   }
 }
 
 function displayQuotes(quote) {
-  quotesContainer.innerHTML = `<q class='GOTquote__sentence'>${quote.sentence}</q>
+  GOTquotesContainer.innerHTML = `<q class='GOTquote__sentence'>${quote.sentence}</q>
 <cite class='GOTquote__character'>${quote.character.name}</cite>`;
 }
 
@@ -112,8 +112,7 @@ document.addEventListener("DOMContentLoaded", function () {
 `;
   }
   GOTcardsContainer.innerHTML = GOTcardsContent;
-  // <p class='GOTcard__title'><b>${card.title}</b></p>
-  // <p class='GOTcard__p'><b>Author:</b> ${card.author}</p>
+
   // переворот карточки
   const cards = document.querySelectorAll(".GOTcard");
 
@@ -188,21 +187,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let TVseriesContent = "";
 
-  //   for (let episod of TVseries) {
-  //     TVseriesContent += `
-  // <div class='GOTtvSeries__box'>
-  // <div class="GOTtvSeries_imgContainer">
-  // <img class='GOTtvSeries_img' src='${episod.image}' alt='TV series poster'/>
-  // </div>
-  // <div class="GOTtvSeries_textContainer">
-  // <p class='GOTtvSeries__title'><b>${episod.title}</b></p>
-  // <p class='GOTtvSeries__p'>${episod.info}</p>
-  // <a class='GOTtvSeries__a' href="${episod.url}" target="_blank">Whatch TV series on amediateka.ru</a>
-  // </div>
-  // </div>
-  // `;
-  //   }
-
   for (let episod of TVseries) {
     TVseriesContent += `
 <div class='GOTtvSeries__box'>
@@ -228,3 +212,48 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+//персонажи
+const GOTcharactersContainer = document.getElementById(
+  "GOT__characters--container"
+);
+const GOTbuttonChar = document.getElementById("GOT__characters--button");
+
+document.addEventListener("DOMContentLoaded", getGOTcharacter);
+
+async function getGOTcharacter() {
+  try {
+    const GOTcharFetch = await fetch(
+      "https://thronesapi.com/api/v2/Characters"
+    );
+
+    if (!GOTcharFetch.ok) {
+      throw new Error(
+        `Возникла ошибка при получении данных с сервера: ${GOTcharFetch.status}`
+      );
+    }
+
+    const GOTcharData = await GOTcharFetch.json();
+    const randomChar =
+      GOTcharData[Math.floor(Math.random() * GOTcharData.length)];
+    displayGOTcharacters(randomChar);
+  } catch (error) {
+    GOTcharactersContainer.innerHTML = `<p>Ошибка: ${error.message}</p>`;
+  }
+}
+
+function displayGOTcharacters(character) {
+  GOTcharactersContainer.innerHTML = `
+  <div class='GOTcharDownload'>
+  <p class='GOTchar_p'>Загрузка изображения...</p>
+  </div>
+  <img class='GOTchar_img' src="${character.imageUrl}" alt="${character.fullName}" style="display:none;" onload="this.style.display=''; this.previousElementSibling.remove();"  />
+  <div class='GOTchar_text'>
+  <p class='GOTchar_p'><b>Name:</b> ${character.fullName}</p>
+  <p class='GOTchar_p'><b>Title:</b> ${character.title}</p>
+  <p class='GOTchar_p'><b>Family:</b> ${character.family}</p>
+  </div>
+  `;
+}
+
+GOTbuttonChar.addEventListener("click", getGOTcharacter);
