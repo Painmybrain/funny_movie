@@ -31,4 +31,35 @@ fetch(apiURL).then((res) => res.json()).then((data) => {
 }).catch((error) => console.log(error));
 
 //Книги
+async function getHarryPotterBooks() {
+  const url = 'https://harry-potter-api-en.onrender.com/db';
+
+  try {
+      const response = await fetch(url);
+      if (!response.ok) {
+          throw new Error('Network response was not ok: ' + response.statusText);
+      }
+      const data = await response.json();
+
+      const bookList = document.getElementById('book-list');
+
+      // Assuming the data returned has a `books` property
+      data.books.forEach(book => {
+          const bookDiv = document.createElement('div');
+          bookDiv.className = 'book';
+          bookDiv.innerHTML = `
+              <h2>${book.title}</h2>
+              <p><strong>Author:</strong> ${book.author}</p>
+              <p><strong>Release Day:</strong> ${book.releaseDay}</p>
+          `;
+          bookList.appendChild(bookDiv);
+      });
+  } catch (error) {
+      console.error('There was a problem with the fetch operation:', error);
+  }
+}
+
+// Call the function
+getHarryPotterBooks();
+
 
