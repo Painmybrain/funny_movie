@@ -1,4 +1,4 @@
-//в проекте неоходимо использовать препроцессор SCSS
+//header, burger, up, cursor,logo//
 @import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Fruktur:ital@0;1&family=Grey+Qo&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap");
 
 .bona-nova-sc-regular {
@@ -83,8 +83,8 @@ footer {
   color: white;
   text-align: center;
   padding: 10px 0;
-  width: 100%;
-  margin: 0;
+  width: 110%;
+  margin-bottom: -40px;
 }
 
 /* Основной стиль для бургер-меню */
@@ -234,8 +234,6 @@ footer {
   color: whitesmoke;
   padding: 0.3rem;
   margin: 0.3rem;
-  max-width: 1350px;
-  margin: 0 auto;
 }
 .GOTtvSeries_logoContainer {
   width: 45rem;
@@ -256,6 +254,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  // color: rgb(0, 143, 0);
 }
 .GOT__quotes {
   // border: 2px solid goldenrod;
@@ -285,7 +284,7 @@ footer {
   margin-bottom: 0.5rem;
   font-size: 1rem;
 }
-.GOT__buttons__style {
+#GOT__button {
   cursor: pointer;
   border: none;
   padding: 10px 25px;
@@ -294,10 +293,10 @@ footer {
   font-size: 1.2rem;
   transition: transform 0.1s ease;
 }
-.GOT__buttons__style:hover {
+#GOT__button:hover {
   background-color: rgb(241, 188, 52);
 }
-.GOT__buttons__style:active {
+#GOT__button:active {
   transform: translateY(2px); //сдвинуть кнопку вниз при нажатии на 2px
 }
 // карточки по книгам игра престолов
@@ -317,7 +316,7 @@ footer {
   width: 18rem;
   height: 29.5rem;
   padding: 0.3rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -368,6 +367,45 @@ footer {
   transform: rotateY(0deg); //Поднимаем заднюю сторону
 }
 // сериал игра престолов
+// .GOTtvSeries {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 0.5rem;
+// }
+// .GOTtvSeries__box {
+//   border: 2px solid rgb(238, 176, 19);
+//   border-radius: 10px;
+//   display: flex;
+//   flex-direction: row;
+//   padding: 0.5rem;
+//   margin: 1rem;
+//   transition: transform 0.3s ease;
+// }
+// .GOTtvSeries__box:hover {
+//   transform: scale(1.03);
+// }
+// .GOTtvSeries_img {
+//   width: 15rem;
+//   border-radius: 10px;
+// }
+// .GOTtvSeries_imgContainer {
+//   margin-right: 1rem;
+// }
+// .GOTtvSeries_textContainer {
+//   padding: 0.5rem;
+// }
+// .GOTtvSeries__title {
+//   font-size: 1.2rem;
+// }
+// .GOTtvSeries__p {
+//   font-size: 1rem;
+// }
+// .GOTtvSeries__a {
+//   color: rgb(238, 176, 19);
+//   text-decoration: none;
+// }
 #GOTtvSeries__container {
   display: flex;
   flex-direction: row;
@@ -378,12 +416,8 @@ footer {
   margin-bottom: 0.5rem;
 }
 .GOT__a {
-  color: whitesmoke;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-.GOT__a:hover {
   color: rgb(238, 176, 19);
+  text-decoration: none;
 }
 .GOTtvSeries__box {
   display: flex;
@@ -392,7 +426,7 @@ footer {
   width: 18rem;
   height: 27rem;
   padding: 0.3rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -444,32 +478,6 @@ footer {
 }
 .GOTtvSeries__box.flipped .GOTTtvSeries__back {
   transform: rotateY(0deg); //Поднимаем заднюю сторону
-}
-//персонажи игра престолов
-#GOT__characters__mainContainer {
-  color: whitesmoke;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-.GOTchar_img,
-.GOTcharDownload {
-  height: 300px;
-  border: 2px solid rgb(238, 176, 19);
-  border-radius: 10px;
-}
-.GOTcharDownload {
-  width: 200px;
-  display: flex;
-}
-.GOTchar_p {
-  font-size: 1rem;
-  padding: 0.3rem;
-}
-.GOTchar_text {
-  margin: 1.5rem;
 }
 
 // harryPotter
