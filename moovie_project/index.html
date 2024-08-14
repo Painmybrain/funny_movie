@@ -6,6 +6,8 @@
     <title>Fantasy Movies</title>
     <link rel="stylesheet" href="./assets/Styles/normalize.css" />
     <link rel="stylesheet" href="./assets/Styles/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Geostar+Fill&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
@@ -145,17 +147,35 @@
   </section>
    
   <!-- Блок по Звездным войнам -->
-  <section id="star-wars">
-  <h2>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg" alt="Star Wars" class="StarWarsLogo">
-  </h2>
-  <div class="sw_quotes_container">
-    <div class="sw_quotes__content"></div>
-    <div class="sw_quotes__author"></div>
-    <button class="sw_quotes__btn">Generate quote</button>
-  </div>
+  <section class="star-wars_visible" id="star-wars">
+    <div class="sw_logo_container">
+      <img
+        class="sw_logo"
+        src="./assets/images/SW/png-star-wars-starwars-logo-png-1837.png"
+        alt="Star Wars"
+      />
+    </div>
+    <div class="sw_btn_next__container">
+      <button class="sw_btn_next">May the force be with you</button>
+    </div>
+    <div class="sw_quotes_container">
+      <div class="sw_quotes__content"></div>
+      <div class="sw_quotes__author"></div>
+      <button class="sw_quotes__btn">Generate</button>
+    </div>    
+  </section>
+  <!-- Секция с фильмами -->
+  <section class="star-wars-movies_hide" id="star-wars-movies">
+    <div class="sw_movies__title">
+      <h2>A long time ago in a galaxy far, far away....</h2>
+      </div>
+      
+    <div class="sw_card__container">     
+    </div>
+    <button class="sw_movies__btn-back">Back</button>
+
+  </section>
   
- </div>
   
     <!-- Footer -->
     <footer>
