@@ -465,8 +465,8 @@ footer {
 }
 
 #harry-potter {
-  border: 1rem solid;
-  background-image: url("/moovie_project/assets/images/HP/HP_walpaper.jpg");
+  border: 1rem solid rgb(255, 255, 0);
+  background-image: url("../assets/images/HP/HP_walpaper.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
