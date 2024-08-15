@@ -138,6 +138,7 @@ movies.forEach(movie => {
 const lotrContainer = new Swiper('.movies-swiper', {
 slidesPerView: 3,
 spaceBetween: 30,
+loop: true,
 navigation: {
   nextEl: '.swiper-button-next',
   prevEl: '.swiper-button-prev',
@@ -146,7 +147,6 @@ pagination: {
   el: '.swiper-pagination',
   clickable: true,
 },
-loop: false,
 breakpoints: {
   640: {
     slidesPerView: 1,
@@ -203,6 +203,7 @@ const booksWrapper = document.querySelector('.books-swiper-wrapper');
         const booksSwiper = new Swiper('.books-swiper', {
           slidesPerView: 3,
           spaceBetween: 30,
+          loop: true,
           navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
@@ -211,7 +212,6 @@ const booksWrapper = document.querySelector('.books-swiper-wrapper');
             el: '.swiper-pagination',
             clickable: true,
           },
-          loop: false,
           breakpoints: {
             640: {
               slidesPerView: 1,
