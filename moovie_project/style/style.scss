@@ -1,4 +1,4 @@
-//в проекте неоходимо использовать препроцессор SCSS
+//header, burger, up, cursor,logo//
 @import url("https://fonts.googleapis.com/css2?family=Bona+Nova+SC:ital,wght@0,400;0,700;1,400&family=Fruktur:ital@0;1&family=Grey+Qo&family=Platypi:ital,wght@0,300..800;1,300..800&display=swap");
 
 .bona-nova-sc-regular {
@@ -25,8 +25,6 @@ html, body {
 header {
   background-color: #1a1a1a;
   padding: 10px 0;
-  width: 100%; /* Устанавливает ширину хедера на 100% */
-  box-sizing: border-box; /* Учитывает padding и border в ширине элемента */
 }
 
 .nav-container {
@@ -85,8 +83,8 @@ footer {
   color: white;
   text-align: center;
   padding: 10px 0;
-  width: 100%;
-  margin: 0;
+  width: 110%;
+  margin-bottom: -40px;
 }
 
 /* Основной стиль для бургер-меню */
@@ -236,8 +234,6 @@ footer {
   color: whitesmoke;
   padding: 0.3rem;
   margin: 0.3rem;
-  max-width: 1350px;
-  margin: 0 auto;
 }
 .GOTtvSeries_logoContainer {
   width: 45rem;
@@ -258,6 +254,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  // color: rgb(0, 143, 0);
 }
 .GOT__quotes {
   // border: 2px solid goldenrod;
@@ -287,7 +284,7 @@ footer {
   margin-bottom: 0.5rem;
   font-size: 1rem;
 }
-.GOT__buttons__style {
+#GOT__button {
   cursor: pointer;
   border: none;
   padding: 10px 25px;
@@ -296,10 +293,10 @@ footer {
   font-size: 1.2rem;
   transition: transform 0.1s ease;
 }
-.GOT__buttons__style:hover {
+#GOT__button:hover {
   background-color: rgb(241, 188, 52);
 }
-.GOT__buttons__style:active {
+#GOT__button:active {
   transform: translateY(2px); //сдвинуть кнопку вниз при нажатии на 2px
 }
 // карточки по книгам игра престолов
@@ -319,7 +316,7 @@ footer {
   width: 18rem;
   height: 29.5rem;
   padding: 0.3rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -370,6 +367,45 @@ footer {
   transform: rotateY(0deg); //Поднимаем заднюю сторону
 }
 // сериал игра престолов
+// .GOTtvSeries {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   padding: 0.5rem;
+// }
+// .GOTtvSeries__box {
+//   border: 2px solid rgb(238, 176, 19);
+//   border-radius: 10px;
+//   display: flex;
+//   flex-direction: row;
+//   padding: 0.5rem;
+//   margin: 1rem;
+//   transition: transform 0.3s ease;
+// }
+// .GOTtvSeries__box:hover {
+//   transform: scale(1.03);
+// }
+// .GOTtvSeries_img {
+//   width: 15rem;
+//   border-radius: 10px;
+// }
+// .GOTtvSeries_imgContainer {
+//   margin-right: 1rem;
+// }
+// .GOTtvSeries_textContainer {
+//   padding: 0.5rem;
+// }
+// .GOTtvSeries__title {
+//   font-size: 1.2rem;
+// }
+// .GOTtvSeries__p {
+//   font-size: 1rem;
+// }
+// .GOTtvSeries__a {
+//   color: rgb(238, 176, 19);
+//   text-decoration: none;
+// }
 #GOTtvSeries__container {
   display: flex;
   flex-direction: row;
@@ -380,12 +416,8 @@ footer {
   margin-bottom: 0.5rem;
 }
 .GOT__a {
-  color: whitesmoke;
-  text-decoration: none;
-  font-size: 1.2rem;
-}
-.GOT__a:hover {
   color: rgb(238, 176, 19);
+  text-decoration: none;
 }
 .GOTtvSeries__box {
   display: flex;
@@ -394,7 +426,7 @@ footer {
   width: 18rem;
   height: 27rem;
   padding: 0.3rem;
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   margin-bottom: 1.5rem;
   border-radius: 10px;
   transition: transform 0.3s ease;
@@ -447,34 +479,18 @@ footer {
 .GOTtvSeries__box.flipped .GOTTtvSeries__back {
   transform: rotateY(0deg); //Поднимаем заднюю сторону
 }
-//персонажи игра престолов
-#GOT__characters__mainContainer {
-  color: whitesmoke;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-}
-.GOTchar_img,
-.GOTcharDownload {
-  height: 300px;
-  border: 2px solid rgb(238, 176, 19);
-  border-radius: 10px;
-}
-.GOTcharDownload {
-  width: 200px;
-  display: flex;
-}
-.GOTchar_p {
-  font-size: 1rem;
-  padding: 0.3rem;
-}
-.GOTchar_text {
-  margin: 1.5rem;
-}
 
 // harryPotter
+#harry-potter{
+  border: 1rem solid rgb(255, 255, 0); 
+  background-image: url("../assets/images/HP/HP_walpaper.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
 
 .HP__container {
   margin: 0px;
@@ -536,80 +552,14 @@ footer {
 }
 
 /* Властелин колец */
-#lotr {
-  background-image: url("/moovie_project/assets/images/LOTR/1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  padding: 20px 0;
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.9);
-  display: flex; /* Используем flexbox для выравнивания содержимого */
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#lotr::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный слой */
-  z-index: 0; /* Позволяет фону находиться позади содержимого */
-}
-
-.lights-wrapper {
-  position: relative;
-  // z-index: 1; /* Чтобы содержимое секции было поверх фона */
-}
-
-#LOTRlogo__container {
-  z-index: 1; /* Чтобы логотип был виден поверх фона */
-  text-align: center;
-}
-
-#journey-title,
-#cards-title,
-#books-title {
-  font-family: "Bona Nova SC", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-#character-container {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
-
-#lotr__button {
-  width: 150px;
-  height: 3rem;
-  font-family: "Bona Nova SC", serif;
-  font-weight: 400;
-  font-style: normal;
-  text-shadow: 2px 2px 1px #71717175, -1px -1px 0 rgb(255, 196, 0);
-  color: rgb(85, 85, 85);
-  background-color: rgb(233, 172, 19);
-  border-radius: 25px;
-  border-color: rgb(198 116 1);
-  background: linear-gradient(to bottom right, #ff8400, #ffe76fd3);
-  box-shadow: 0 0 10px rgba(219, 219, 219, 0.7),
-    inset 0 0 20px rgba(255, 153, 0, 0.7);
-}
-
-#lotr__button:hover {
-  color: #ff6600;
-  background: transparent;
-  padding: 8px 13px;
-  border: 2px solid #ffd900;
-}
-
 /* Swiper */
+#journey-title,
+#cards-title {
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .swiper-container {
   width: 28%;
   margin: 0 auto;
@@ -644,7 +594,7 @@ footer {
   margin-bottom: 10px;
 }
 
-.book-title, .movie-title {
+.book-title {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
@@ -652,90 +602,199 @@ footer {
   margin-top: 10px;
 }
 
-.book-year, .movie-year {
+.book-year {
   font-size: 16px;
   color: #666;
   margin-top: 5px;
   text-align: center;
 }
 
-.movie-genres {
-  font-size: 16px;
-  color: #666;
-  margin-top: 5px;
-  text-align: center;
+.swiper-button-next,
+.swiper-button-prev {
+  color: #333;
 }
-
-// .swiper-button-next,
-// .swiper-button-prev {
-//   color: #333;
-// }
 
 .swiper-pagination-bullet {
   background: #333;
 }
 
+.LOTRcard {
+  width: 200px;
+  height: 100%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  padding: 10px;
+}
+
+.LOTRcard__image {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.LOTRcard__text {
+  margin-top: 10px;
+}
+
+#character-container {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+#lotr__button {
+  width: 150px;
+  height: 3rem;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 1px #71717175, -1px -1px 0 rgb(255, 196, 0);
+  color: rgb(85, 85, 85);
+  background-color: rgb(233, 172, 19);
+  border-radius: 25px;
+  border-color: rgb(198 116 1);
+  background: linear-gradient(to bottom right, #ff8400, #ffe76fd3);
+  box-shadow: 0 0 10px rgba(219, 219, 219, 0.7),
+    inset 0 0 20px rgba(255, 153, 0, 0.7);
+}
+
+#lotr__button:hover {
+  color: #ff6600;
+  background: transparent;
+  padding: 8px 13px;
+  border: 2px solid #ffd900;
+}
+
+// Тут карточки
+
+#cards-title {
+  margin-top: 65px;
+}
+
+.nav-button {
+  background-color: transparent;
+  border: none;
+  font-size: 60px;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-button:hover {
+  color: #ffe100;
+  transform: scale(1.1);
+}
+
+#prevButton {
+  margin-right: 20px;
+}
+
+#nextButton {
+  margin-left: 20px;
+}
+
+#LOTRcards_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  flex-shrink: 0;
+}
+
+.card-container {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.LOTRcard__image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.LOTRcard__title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.LOTRcard__genres,
+.LOTRcard__year,
+.LOTRcard__about {
+  margin-bottom: 10px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.LOTRcard__about {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.LOTRcard__title,
+.LOTRcard__genres,
+.LOTRcard__year {
+  text-align: center;
+}
+
+#lotr {
+  background-image: url("/moovie_project/assets/images/LOTR/1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 20px 0;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.9);
+  display: flex; /* Используем flexbox для выравнивания содержимого */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#LOTRlogo__container {
+  z-index: 1; /* Чтобы логотип был виден поверх фона */
+  text-align: center;
+}
+
+#lotr::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный слой */
+  z-index: 0; /* Позволяет фону находиться позади содержимого */
+}
+
+.lights-wrapper {
+  position: relative;
+  // z-index: 1; /* Чтобы содержимое секции было поверх фона */
+}
 
 // Star Wars
 
-// Переменные
-$sw-main-color: rgb(219, 201, 34); 
-$logo-width: 18em;
-
-
-.star-wars_visible {
-  display: flex;
-}
-
 #star-wars {
-  box-sizing: border-box;  
-  position: relative;
-  flex-direction: column;  
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 5rem;
-  padding-bottom: 3rem;
-  min-height: 50rem;
-  background-image: url(../images/SW/maxresdefault.jpg);
-  border: 1px solid $sw-main-color;
-  font-family: "Didact Gothic", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.sw_logo_container {
-  padding: 19px;
-  max-width: 40rem;
-  min-height: 20rem;
-}
-
-.sw_logo {
-  width: 100%;
-}
-
-.sw_btn_next__container {
-  margin-top: 5rem;
-}
-
-.sw_btn_next {
-  cursor: pointer;
-  border: 2px solid $sw-main-color;
-  padding: 20px 45px;  
-  background-color: transparent;
-  font-size: 35px;
-  font-family: "Geostar Fill", serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #ffffff;
-  transition: transform 0.1s ease;
-}
-
-.sw_btn_next:hover {
-  border: 2px dashed $sw-main-color;
-}
-
-.sw_btn_next:active {
-  transform: translateY(2px);
 }
 
 .sw_quotes_container {
@@ -743,12 +802,10 @@ $logo-width: 18em;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  max-width: 650px;
+  width: 650px;
   height: 8rem;
   padding: 1rem;
   margin: 0.5rem;
-  margin-top: 5rem;
-  font-size: 20px;
 }
 
 .sw_quotes__author {
@@ -760,166 +817,8 @@ $logo-width: 18em;
   cursor: pointer;
   border: none;
   padding: 10px 25px;
-  border-radius: 10px;
-  background-color: $sw-main-color;
-  font-family: "Geostar Fill", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 20px;
+  border-radius: 25px;
+  background-color: goldenrod;
+  font-size: 15px;
   transition: transform 0.1s ease;
-}
-
-.sw_quotes__btn:active {
-  transform: translateY(2px);
-}
-
-.sw_quotes__btn:hover {
-  background-color: rgb(224, 213, 114);
-}
-
-// movie section
-.star-wars-movies_hide {
-  display: none;
-}
-
-#star-wars-movies {
-  box-sizing: border-box;  
-  flex-direction: column;  
-  justify-content: center;
-  align-items: center;
-  padding: 3rem;
-  min-height: 50rem;
-  // background-image: url(../images/SW/beautiful-shining-stars-night-sky.jpg);
-  border: 1px solid $sw-main-color;
-  font-family: "Didact Gothic", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.sw_movies__title {
-  padding: 20px;
-  max-width: 700px;
-  text-align: left;
-  font-size: 35px;
-  color: #358aeb;
-}
-
-.sw_movies__img-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.sw_movies__img_cont {
-  max-height: 600px;
-  max-width: 200px;
-  border: 1px solid $sw-main-color;
-}
-
-.sw_movies__img {
-  width: 100%;
-}
-
-.sw_card__container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.sw_movie_card {
-  padding: 20px;
-  height: 450px;
-  width: 220px;
-  border: 1px solid $sw-main-color;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: top center;
-}
-
-.sw_movie_card:nth-child(1) {  
-  background-image: url(../images/SW/ep4.jpg);  
-}
-
-.sw_movie_card:nth-child(2) {  
-  background-image: url(../images/SW/ep5.jpg);  
-}
-
-.sw_movie_card:nth-child(3) {  
-  background-image: url(../images/SW/ep6.jpg);  
-}
-
-.sw_movie_card:nth-child(4) {  
-  background-image: url(../images/SW/ep1.jpg);  
-}
-
-.sw_movie_card:nth-child(5) {  
-  background-image: url(../images/SW/ep2.jpg);  
-}
-
-.sw_movie_card:nth-child(6) {  
-  background-image: url(../images/SW/ep3.jpg);  
-}
-
-.sw_card_title {
-  margin-top: 320px;
-}
-
-.sw_movies__btn-back {
-  cursor: pointer;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 10px;
-  background-color: $sw-main-color;
-  
-  transition: transform 0.1s ease;
-}
-
-
-.star-wars-movies_visible {
-  display: flex;
-}
-
-.star-wars_hide {
-  display: none;
-}
-
-
-
-
-// ANMATION
-// LOGO travelling
-
-.sw_logo_animation {
-  position: absolute;
-  top: 21%;
-  left: 50%;
-  z-index: 1;
-  animation: logo 6s ease-out 0s;
-  opacity: 0;
-}
-
-@keyframes logo {
-  0% {
-      width: $logo-width; 
-      margin: 0 (-$logo-width/2) 0 (-$logo-width/2);       
-      transform: scale(2.2);
-      opacity: 1;
-  }
-  20% {
-      width: $logo-width;      
-      margin: 0 (-$logo-width/2) 0 (-$logo-width/2);
-  }
-  50% {
-      opacity: 1;
-      width: $logo-width; 
-      margin: 0 (-$logo-width/2) 0 (-$logo-width/2);    
-  }
-  100% {
-      opacity: 0;
-      transform: scale(0.1);
-      width: $logo-width;
-      margin: 0 (-$logo-width/2) 0 (-$logo-width/2);
-  }
 }

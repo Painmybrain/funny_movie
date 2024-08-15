@@ -124,3 +124,72 @@ $(document).ready(function () {
   generateQuote();
 
 });
+
+
+// movie section
+
+document.addEventListener('DOMContentLoaded', (el) => {
+  const swMovieSection = document.getElementById('star-wars-movies');
+  const swStartSection = document.getElementById('star-wars');
+  const swNextBtn = document.querySelector('.sw_btn_next');
+  const swLogoAnimation = document.querySelector('.sw_logo');
+  const swBackBtn = document.querySelector('.sw_movies__btn-back');
+
+  swNextBtn.addEventListener('click', (el) => { 
+    swLogoAnimation.classList.add('sw_logo_animation');    
+  })
+
+  swLogoAnimation.addEventListener('animationend', (el) => {
+    // Скрыть стартовую секцию      
+    swStartSection.classList.toggle('star-wars_hide');
+    //  Показать секцию с фильмами  
+    swMovieSection.classList.toggle('star-wars-movies_visible');
+  })
+
+  // Не работает. Проверить!
+swBackBtn.addEventListener('click', (el) => {
+  // Скрыть секцию с фильмами 
+  swMovieSection.classList.toggle('star-wars-movies_hide');
+
+  swStartSection.classList.toggle('star-wars_visible');
+  
+  
+
+})
+
+})
+
+
+
+
+// movie cards
+
+async function getSwMovies() {
+  let apiUrl = 'https://swapi.dev/api/films/';
+
+  try {
+    const response = await fetch(apiUrl);
+    if(!response.ok) {
+      throw new Error('Данные с сервера не получены');
+    }
+    const data = await response.json();
+
+    const movieList = document.querySelector('.sw_card__container');
+       
+       
+    data.results.forEach(result => {
+      const movieCont = document.createElement('div');
+      movieCont.className = 'sw_movie_card';
+      movieCont.innerHTML = `      
+      <h2 class="sw_card_title">${result.title}</h2>
+      <p>Director: ${result.director}</p>
+      <p>Release Date: ${result.release_date}</p>`;
+      movieList.appendChild(movieCont)  
+})
+  } catch (error) {
+    console.error('There was a problem with the fetch operation:', error);
+  }
+}
+
+getSwMovies();
+

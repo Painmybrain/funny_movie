@@ -6,6 +6,8 @@
     <title>Fantasy Movies</title>
     <link rel="stylesheet" href="./assets/Styles/normalize.css" />
     <link rel="stylesheet" href="./assets/Styles/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Geostar+Fill&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.css"
@@ -31,7 +33,6 @@
             <li><a href="#lotr">Lord of the Rings</a></li>
             <li><a href="#gameofthones">Game of Thrones</a></li>
             <li><a href="#star-wars">Star Wars</a></li>
-            <li><a href="#team">Our Team</a></li>
           </ul>
           <div class="burger-menu" id="burger-menu">
             <span></span>
@@ -43,6 +44,7 @@
     </header>
 
     <main>
+      <div class="content-wrapper">
       <section id="home">
         <h1>Welcome to Fantasy Movies</h1>
         <p>
@@ -64,15 +66,12 @@
             <a class="HP__button" id="generate">Generate Quote</a>
           </div>
         </div>
-        <h3>Harry Potter Characters</h3>
+        <h2>Harry Potter Characters</h2>
     <div id="HP__characters">
     </div>
-
-  <h4>Harry Potter Books</h4>
-  <div id="HP__books">
-  </div>
-
-      </section>
+  <h2>Harry Potter Books</h2>
+  <div id="book-list"></div>
+</section>
 
       <!--Блок по Властелину Колец-->
       <section id="lotr">
@@ -113,18 +112,18 @@
 
       <!-- Блок по игре престолов -->
 <section id="gameofthones">
-  <div class="GOT__container"></div>
-  <div class="GOTtvSeries_logoContainer">
-  <img
-  class="GOTtvSeries_logo"
-  src="./assets/images/GOT/GOT_logo5.png"
-  alt="Game of Trones Logo"
-  />
-  </div>
+  <div class="GOT__container">
+    <div class="GOTtvSeries_logoContainer">
+      <img
+        class="GOTtvSeries_logo"
+        src="./assets/images/GOT/GOT_logo5.png"
+        alt="Game of Trones Logo"
+        />
+    </div>
    
   <div class="GOT__quotes">
   <div id="GOT__quotes--container"></div>
-  <button id="GOT__button" type="button">Another quote!</button>
+  <button class="GOT__buttons__style" id="GOT__button" type="button">Another quote!</button>
   </div>
   <h3 class="GOT_h3">Books in the A Song of Ice and Fire series</h3>
   <a class='GOT__a' href="https://www.litres.ru/author/dzhordzh-r-r-martin-45006/" target="_blank">Read books on litres.ru</a>
@@ -134,22 +133,48 @@
   <a class='GOT__a' href="https://www.amediateka.ru/watch/series_11223_finaligra-prestolov/season_1_11646" target="_blank">Whatch TV series on amediateka.ru</a>
   <div id="GOTtvSeries__container"></div>
   </div>
+  
+  <div id="GOT__characters__mainContainer">
+    <h3  class="GOT_h3">Game of Thrones characters</h3>
+    <div id="GOT__characters--container"></div>
+    <button class="GOT__buttons__style" id="GOT__characters--button" type="button">Another character!</button>
   </div>
+  
+  </div>
+</div>
   </section>
    
   <!-- Блок по Звездным войнам -->
-  <section id="star-wars">
-  <h2>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg" alt="Star Wars" class="StarWarsLogo">
-  </h2>
-  <div class="sw_quotes_container">
-    <div class="sw_quotes__content"></div>
-    <div class="sw_quotes__author"></div>
-    <button class="sw_quotes__btn">Generate quote</button>
-  </div>
-  
+  <section class="star-wars_visible" id="star-wars">
+    <div class="sw_logo_container">
+      <img
+        class="sw_logo"
+        src="./assets/images/SW/png-star-wars-starwars-logo-png-1837.png"
+        alt="Star Wars"
+      />
+    </div>
+    <div class="sw_btn_next__container">
+      <button class="sw_btn_next">May the force be with you</button>
+    </div>
+    <div class="sw_quotes_container">
+      <div class="sw_quotes__content"></div>
+      <div class="sw_quotes__author"></div>
+      <button class="sw_quotes__btn">Generate</button>
+    </div>    
   </section>
+  <!-- Секция с фильмами -->
+  <section class="star-wars-movies_hide" id="star-wars-movies">
+    <div class="sw_movies__title">
+      <h2>A long time ago in a galaxy far, far away....</h2>
+      </div>
+      
+    <div class="sw_card__container">     
+    </div>
+    <button class="sw_movies__btn-back">Back</button>
 
+  </section>
+  
+  
     <!-- Footer -->
     <footer>
       <p>&copy; 2024 Fantasy Movies. All rights reserved.</p>
@@ -171,5 +196,7 @@
     "></script>
     <script type="module" src="./JavaScript/lotr.js"></script>
     <script src="./JavaScript/starWars.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
   </body>
 </html>
