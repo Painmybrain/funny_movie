@@ -7,7 +7,8 @@
   font-style: normal;
 }
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -16,11 +17,15 @@ html, body {
   color: #fff;
   display: flex;
   flex-direction: column;
-  cursor: url("https://cybersoft.ru/uploads/posts/2021-04/thumbs/1618167045_videoshow.png") 0 0, auto; /* Кастомный курсор */
+  cursor: url("https://cybersoft.ru/uploads/posts/2021-04/thumbs/1618167045_videoshow.png")
+      0 0,
+    auto; /* Кастомный курсор */
 }
 
 * {
-  cursor: url("https://cybersoft.ru/uploads/posts/2021-04/thumbs/1618167045_videoshow.png") 0 0, auto;
+  cursor: url("https://cybersoft.ru/uploads/posts/2021-04/thumbs/1618167045_videoshow.png")
+      0 0,
+    auto;
   box-sizing: border-box; /* Обеспечивает правильное вычисление размеров элементов */
 }
 
@@ -73,7 +78,8 @@ main {
 }
 
 section {
-  margin: 20px 0;
+  margin: 0 auto;
+  max-width: 1400px;
 }
 
 .content-wrapper {
@@ -86,7 +92,7 @@ footer {
   text-align: center;
   padding: 10px 0;
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
 }
 
 .burger-menu {
@@ -253,7 +259,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 650px;
+  max-width: 700px;
   height: 8rem;
   padding: 1rem;
   margin: 0.5rem;
@@ -442,6 +448,7 @@ footer {
   justify-content: center;
   align-items: center;
   margin: 0 auto;
+  margin-bottom: 2rem;
 }
 .GOTchar_img,
 .GOTcharDownload {
@@ -464,7 +471,8 @@ footer {
 // harryPotter
 
 .HP__container {
-  margin: 0px;
+  max-width: 700px;
+  margin: 0 auto;
   text-align: center;
   min-height: 100%;
   display: flex;
@@ -512,9 +520,9 @@ footer {
   flex-direction: row;
   flex-wrap: wrap;
   text-align: center;
-  width: 60%;
-  padding: 0, 5 rem;
-  margin-left: 25rem;
+  width: 80%;
+  padding: 0.5rem;
+  margin: 0 auto;
 }
 #HP_character {
   border: 10px solid black;
@@ -631,7 +639,8 @@ footer {
   margin-bottom: 10px;
 }
 
-.book-title, .movie-title {
+.book-title,
+.movie-title {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
@@ -639,7 +648,8 @@ footer {
   margin-top: 10px;
 }
 
-.book-year, .movie-year {
+.book-year,
+.movie-year {
   font-size: 16px;
   color: #666;
   margin-top: 5px;
@@ -662,22 +672,20 @@ footer {
   background: #333;
 }
 
-
 // Star Wars
 
 // Переменные
-$sw-main-color: rgb(219, 201, 34); 
+$sw-main-color: rgb(219, 201, 34);
 $logo-width: 18em;
-
 
 .star-wars_visible {
   display: flex;
 }
 
 #star-wars {
-  box-sizing: border-box;  
+  box-sizing: border-box;
   position: relative;
-  flex-direction: column;  
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-top: 5rem;
@@ -707,7 +715,7 @@ $logo-width: 18em;
 .sw_btn_next {
   cursor: pointer;
   border: 2px solid $sw-main-color;
-  padding: 20px 45px;  
+  padding: 20px 45px;
   background-color: transparent;
   font-size: 35px;
   font-family: "Geostar Fill", serif;
@@ -770,8 +778,8 @@ $logo-width: 18em;
 }
 
 #star-wars-movies {
-  box-sizing: border-box;  
-  flex-direction: column;  
+  box-sizing: border-box;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 3rem;
@@ -825,28 +833,28 @@ $logo-width: 18em;
   background-position: top center;
 }
 
-.sw_movie_card:nth-child(1) {  
-  background-image: url(../images/SW/ep4.jpg);  
+.sw_movie_card:nth-child(1) {
+  background-image: url(../images/SW/ep4.jpg);
 }
 
-.sw_movie_card:nth-child(2) {  
-  background-image: url(../images/SW/ep5.jpg);  
+.sw_movie_card:nth-child(2) {
+  background-image: url(../images/SW/ep5.jpg);
 }
 
-.sw_movie_card:nth-child(3) {  
-  background-image: url(../images/SW/ep6.jpg);  
+.sw_movie_card:nth-child(3) {
+  background-image: url(../images/SW/ep6.jpg);
 }
 
-.sw_movie_card:nth-child(4) {  
-  background-image: url(../images/SW/ep1.jpg);  
+.sw_movie_card:nth-child(4) {
+  background-image: url(../images/SW/ep1.jpg);
 }
 
-.sw_movie_card:nth-child(5) {  
-  background-image: url(../images/SW/ep2.jpg);  
+.sw_movie_card:nth-child(5) {
+  background-image: url(../images/SW/ep2.jpg);
 }
 
-.sw_movie_card:nth-child(6) {  
-  background-image: url(../images/SW/ep3.jpg);  
+.sw_movie_card:nth-child(6) {
+  background-image: url(../images/SW/ep3.jpg);
 }
 
 .sw_card_title {
@@ -859,10 +867,9 @@ $logo-width: 18em;
   padding: 10px 25px;
   border-radius: 10px;
   background-color: $sw-main-color;
-  
+
   transition: transform 0.1s ease;
 }
-
 
 .star-wars-movies_visible {
   display: flex;
@@ -871,9 +878,6 @@ $logo-width: 18em;
 .star-wars_hide {
   display: none;
 }
-
-
-
 
 // ANMATION
 // LOGO travelling
@@ -889,24 +893,24 @@ $logo-width: 18em;
 
 @keyframes logo {
   0% {
-      width: $logo-width; 
-      margin: 0 (-$logo-width/2) 0 (-$logo-width/2);       
-      transform: scale(2.2);
-      opacity: 1;
+    width: $logo-width;
+    margin: 0 (-$logo-width/2) 0 (-$logo-width/2);
+    transform: scale(2.2);
+    opacity: 1;
   }
   20% {
-      width: $logo-width;      
-      margin: 0 (-$logo-width/2) 0 (-$logo-width/2);
+    width: $logo-width;
+    margin: 0 (-$logo-width/2) 0 (-$logo-width/2);
   }
   50% {
-      opacity: 1;
-      width: $logo-width; 
-      margin: 0 (-$logo-width/2) 0 (-$logo-width/2);    
+    opacity: 1;
+    width: $logo-width;
+    margin: 0 (-$logo-width/2) 0 (-$logo-width/2);
   }
   100% {
-      opacity: 0;
-      transform: scale(0.1);
-      width: $logo-width;
-      margin: 0 (-$logo-width/2) 0 (-$logo-width/2);
+    opacity: 0;
+    transform: scale(0.1);
+    width: $logo-width;
+    margin: 0 (-$logo-width/2) 0 (-$logo-width/2);
   }
 }
