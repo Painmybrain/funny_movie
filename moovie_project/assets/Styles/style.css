@@ -563,14 +563,77 @@ footer {
 }
 
 /* Властелин колец */
-/* Swiper */
+#lotr {
+  background-image: url("/moovie_project/assets/images/LOTR/1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  padding: 20px 0;
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.9);
+  display: flex; /* Используем flexbox для выравнивания содержимого */
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#lotr::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный слой */
+  z-index: 0; /* Позволяет фону находиться позади содержимого */
+}
+
+.lights-wrapper {
+  position: relative;
+}
+
+#LOTRlogo__container {
+  z-index: 1; /* Чтобы логотип был виден поверх фона */
+  text-align: center;
+}
+
 #journey-title,
-#cards-title {
+#cards-title,
+#books-title {
   font-family: "Bona Nova SC", serif;
   font-weight: 400;
   font-style: normal;
 }
 
+#character-container {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
+#lotr__button {
+  width: 150px;
+  height: 3rem;
+  font-family: "Bona Nova SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  text-shadow: 2px 2px 1px rgba(113, 113, 113, 0.4588235294), -1px -1px 0 rgb(255, 196, 0);
+  color: rgb(85, 85, 85);
+  background-color: rgb(233, 172, 19);
+  border-radius: 25px;
+  border-color: rgb(198, 116, 1);
+  background: linear-gradient(to bottom right, #ff8400, rgba(255, 231, 111, 0.8274509804));
+  box-shadow: 0 0 10px rgba(219, 219, 219, 0.7), inset 0 0 20px rgba(255, 153, 0, 0.7);
+}
+
+#lotr__button:hover {
+  color: #ff6600;
+  background: transparent;
+  padding: 8px 13px;
+  border: 2px solid #ffd900;
+}
+
+/* Swiper */
 .swiper-container {
   width: 28%;
   margin: 0 auto;
@@ -606,7 +669,7 @@ footer {
   margin-bottom: 10px;
 }
 
-.book-title {
+.book-title, .movie-title {
   font-size: 18px;
   font-weight: bold;
   text-align: center;
@@ -614,186 +677,22 @@ footer {
   margin-top: 10px;
 }
 
-.book-year {
+.book-year, .movie-year {
   font-size: 16px;
   color: #666;
   margin-top: 5px;
   text-align: center;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  color: #333;
+.movie-genres {
+  font-size: 16px;
+  color: #666;
+  margin-top: 5px;
+  text-align: center;
 }
 
 .swiper-pagination-bullet {
   background: #333;
-}
-
-.LOTRcard {
-  width: 200px;
-  height: 100%;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  text-align: center;
-  padding: 10px;
-}
-
-.LOTRcard__image {
-  width: 100%;
-  height: 60%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.LOTRcard__text {
-  margin-top: 10px;
-}
-
-#character-container {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
-}
-
-#lotr__button {
-  width: 150px;
-  height: 3rem;
-  font-family: "Bona Nova SC", serif;
-  font-weight: 400;
-  font-style: normal;
-  text-shadow: 2px 2px 1px rgba(113, 113, 113, 0.4588235294), -1px -1px 0 rgb(255, 196, 0);
-  color: rgb(85, 85, 85);
-  background-color: rgb(233, 172, 19);
-  border-radius: 25px;
-  border-color: rgb(198, 116, 1);
-  background: linear-gradient(to bottom right, #ff8400, rgba(255, 231, 111, 0.8274509804));
-  box-shadow: 0 0 10px rgba(219, 219, 219, 0.7), inset 0 0 20px rgba(255, 153, 0, 0.7);
-}
-
-#lotr__button:hover {
-  color: #ff6600;
-  background: transparent;
-  padding: 8px 13px;
-  border: 2px solid #ffd900;
-}
-
-#cards-title {
-  margin-top: 65px;
-}
-
-.nav-button {
-  background-color: transparent;
-  border: none;
-  font-size: 60px;
-  color: #ffffff;
-  cursor: pointer;
-  padding: 10px;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.nav-button:hover {
-  color: #ffe100;
-  transform: scale(1.1);
-}
-
-#prevButton {
-  margin-right: 20px;
-}
-
-#nextButton {
-  margin-left: 20px;
-}
-
-#LOTRcards_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 80px;
-}
-
-.cards-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  max-width: 400px;
-  flex-shrink: 0;
-}
-
-.card-container {
-  display: block !important;
-  visibility: visible !important;
-  opacity: 1 !important;
-}
-
-.LOTRcard__image {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin-bottom: 15px;
-}
-
-.LOTRcard__title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
-.LOTRcard__genres,
-.LOTRcard__year,
-.LOTRcard__about {
-  margin-bottom: 10px;
-  text-align: left;
-  font-size: 16px;
-}
-
-.LOTRcard__about {
-  font-size: 14px;
-  line-height: 1.5;
-}
-
-.LOTRcard__title,
-.LOTRcard__genres,
-.LOTRcard__year {
-  text-align: center;
-}
-
-#lotr {
-  background-image: url("/moovie_project/assets/images/LOTR/1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  padding: 20px 0;
-  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.9);
-  display: flex; /* Используем flexbox для выравнивания содержимого */
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#LOTRlogo__container {
-  z-index: 1; /* Чтобы логотип был виден поверх фона */
-  text-align: center;
-}
-
-#lotr::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный слой */
-  z-index: 0; /* Позволяет фону находиться позади содержимого */
-}
-
-.lights-wrapper {
-  position: relative;
 }
 
 .star-wars_visible {

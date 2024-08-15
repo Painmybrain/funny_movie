@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Geostar+Fill&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+      href="https://unpkg.com/swiper/swiper-bundle.css"
     />
     <link
       rel="icon"
@@ -88,21 +88,19 @@
           <h2 id="cards-title">
             How to watch The Lord of the Rings and The Hobbit movies in order
           </h2>
-          <div id="LOTRcards_container">
-            <button id="prevButton" class="nav-button">&lt;</button>
-            <div id="cards-wrapper" class="cards-wrapper">
-              <div class="card-container">
-                <img class="LOTRcard__image" src="" alt="Movie image"/>
-                <h3 class="LOTRcard__title"></h3>
-                <div class="LOTRcard__genres"></div>
-                <div class="LOTRcard__year"></div>
+          <div class="swiper-container movies-swiper">
+            <div class="swiper-wrapper movies-swiper-wrapper">
               </div>
-            </div>
-            <button id="nextButton" class="nav-button">&gt;</button>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
           </div>
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!-- Слайды будут динамически добавляться сюда -->
+        </div>
+        <div>
+          <!-- Слайдер для книг -->
+          <h2 id="books-title">Books</h2>
+          <div class="swiper-container books-swiper">
+            <div class="swiper-wrapper books-swiper-wrapper">
             </div>
             <!-- Навигационные кнопки -->
             <div class="swiper-button-next"></div>
@@ -190,9 +188,15 @@
     <script type="module" src="./JavaScript/gameOfThrones.js"></script>
     <script type="module" src="./JavaScript/harryPotter.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="module">
+      import swiper from 'https://cdn.jsdelivr.net/npm/swiper@11.1.9/+esm'
+      </script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/swiper@11.1.9/swiper-bundle.min.js
+    "></script>
     <script type="module" src="./JavaScript/lotr.js"></script>
     <script src="./JavaScript/starWars.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    </script>
+
   </body>
 </html>
