@@ -18,15 +18,17 @@ html, body {
   flex-direction: column;
   cursor: url("https://cybersoft.ru/uploads/posts/2021-04/thumbs/1618167045_videoshow.png") 0 0, auto; /* Кастомный курсор */
 }
+
 * {
   cursor: url("https://cybersoft.ru/uploads/posts/2021-04/thumbs/1618167045_videoshow.png") 0 0, auto;
+  box-sizing: border-box; /* Обеспечивает правильное вычисление размеров элементов */
 }
 
 header {
   background-color: #1a1a1a;
   padding: 10px 0;
-  width: 100%; /* Устанавливает ширину хедера на 100% */
-  box-sizing: border-box; /* Учитывает padding и border в ширине элемента */
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .nav-container {
@@ -67,19 +69,17 @@ nav ul li a:hover {
 main {
   padding: 20px;
   text-align: center;
-  flex: 1; /* Основное содержимое растягивается на доступную высоту */
+  flex: 1;
 }
 
 section {
   margin: 20px 0;
 }
 
-/* Контейнер для основного контента */
 .content-wrapper {
-  flex: 1; /* Контент занимает оставшееся место на странице */
+  flex: 1;
 }
 
-/* Стили футера */
 footer {
   background-color: #1a1a1a;
   color: white;
@@ -89,7 +89,6 @@ footer {
   margin: 0;
 }
 
-/* Основной стиль для бургер-меню */
 .burger-menu {
   display: none; /* Скрываем бургер-меню на больших экранах */
   width: 35px;
@@ -111,22 +110,20 @@ footer {
   position: relative;
 }
 
-/* Анимация при нажатии, когда бургер превращается в крестик */
 .burger-menu.active span:nth-child(1) {
   transform: rotate(45deg);
-  top: 10px; /* Смещение линии для центра */
+  top: 10px;
 }
 
 .burger-menu.active span:nth-child(2) {
-  opacity: 0; /* Средняя линия исчезает */
+  opacity: 0;
 }
 
 .burger-menu.active span:nth-child(3) {
   transform: rotate(-45deg);
-  top: -10px; /* Смещение линии для центра */
+  top: -10px;
 }
 
-/* Скрытие меню по умолчанию */
 .menu {
   display: none;
   list-style: none;
@@ -134,31 +131,11 @@ footer {
   margin: 0;
   flex-direction: column;
   align-items: center;
-  padding: 0 20px; /* Отступы по 20px слева и справа */
+  padding: 0 20px;
 }
 
-/* Показ меню при активном бургер-меню */
 .menu.active {
   display: flex;
-}
-
-/* Медиа-запрос: отображаем бургер-меню и настраиваем отступы для мобильных устройств */
-@media (max-width: 768px) {
-  .burger-menu {
-    display: flex; /* Показываем бургер-меню только на мобильных устройствах */
-    margin-left: 20px; /* Уменьшаем отступ слева на мобильных устройствах */
-  }
-
-  .menu {
-    padding: 0 20px; /* Отступы по 20px слева и справа */
-  }
-
-  .nav-links {
-    flex-direction: column; /* Вертикальное меню на мобильных устройствах */
-    gap: 10px;
-    align-items: center;
-    margin-top: 20px;
-  }
 }
 
 .nav-links {
@@ -182,7 +159,7 @@ footer {
 /* Кнопка "Back to top" */
 .back-to-top {
   position: fixed;
-  bottom: 75px; /* Поднимаем кнопку выше на 75px от нижней границы окна */
+  bottom: 20px;
   right: 20px;
   background-color: #ffd700;
   color: #000;
@@ -191,7 +168,7 @@ footer {
   border-radius: 5px;
   cursor: pointer;
   display: none;
-  z-index: 1000; /* Убедитесь, что кнопка отображается поверх других элементов */
+  z-index: 1001;
 }
 
 .back-to-top:hover {
@@ -201,8 +178,10 @@ footer {
 /* Responsive Styles */
 @media (max-width: 768px) {
   .burger-menu {
-    display: flex;
+    display: flex; /* Показываем бургер-меню только на мобильных устройствах */
+    margin-left: 20px;
   }
+
   .nav-links {
     position: fixed;
     right: 0;
@@ -218,11 +197,19 @@ footer {
     z-index: 1000;
     text-align: center;
   }
+
   .nav-links.active {
     transform: translateX(0);
   }
+
   .nav-links a {
     font-size: 24px;
+  }
+
+  /* Кнопка "Back to top" видна на мобильных устройствах */
+  .back-to-top {
+    display: block;
+    bottom: 75px; /* Для мобильных устройств поднять кнопку немного выше */
   }
 }
 

@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+  // Анимация наведения на элементы меню
   const menuItems = document.querySelectorAll('nav ul li a');
   menuItems.forEach(item => {
     item.addEventListener('mouseover', () => {
@@ -10,39 +11,42 @@ document.addEventListener('DOMContentLoaded', () => {
       item.style.textShadow = '';
     });
   });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+  // Бургер-меню: открытие/закрытие и автоматическое закрытие при клике на раздел
   const burgerMenu = document.getElementById('burger-menu');
   const navLinks = document.getElementById('nav-links');
   const navItems = navLinks.querySelectorAll('a');
 
-  // Открытие и закрытие бургер-меню
   burgerMenu.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
 
-  // Автоматическое закрытие меню при клике на раздел
   navItems.forEach(item => {
     item.addEventListener('click', () => {
       navLinks.classList.remove('active');
     });
   });
-});
 
-  // Кнопка "Наверх": отображение/скрытие и прокрутка
-  window.addEventListener('scroll', () => {
-    const backToTopButton = document.getElementById('back-to-top');
+  // Кнопка "Наверх": отображение/скрытие и плавная прокрутка
+  const backToTopButton = document.getElementById('back-to-top');
+
+  const toggleBackToTopButton = () => {
     if (window.pageYOffset > 300) {
       backToTopButton.style.display = 'block';
     } else {
       backToTopButton.style.display = 'none';
     }
-  });
+  };
 
-  document.getElementById('back-to-top').addEventListener('click', () => {
+  window.addEventListener('scroll', toggleBackToTopButton);
+
+  backToTopButton.addEventListener('click', () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
   });
+
+  // Инициализация видимости кнопки при загрузке страницы
+  toggleBackToTopButton();
+});
