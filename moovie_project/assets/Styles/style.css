@@ -592,7 +592,7 @@ footer {
 
 /* Властелин колец */
 #lotr {
-  background-image: url("/moovie_project/assets/images/LOTR/background3.jpg");
+  background-image: url("../images/LOTR/1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
