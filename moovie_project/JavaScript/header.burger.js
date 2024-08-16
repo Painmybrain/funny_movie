@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const toggleBackToTopButton = () => {
     clearTimeout(timeout);
     timeout = setTimeout(() => {
-      if (window.scrollY > 500) {
+      if (window.scrollY > 200) {
         backToTopButton.classList.remove("hidden");
       } else {
         backToTopButton.classList.add("hidden");
