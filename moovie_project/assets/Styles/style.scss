@@ -78,6 +78,30 @@ main {
   flex: 1;
 }
 
+// для картинки //
+#home {
+  position: relative;
+  width: 100%;
+  height: var(--image-height, 400px); /* Вы можете регулировать высоту здесь */
+  overflow: hidden; /* Скроем все, что выходит за границы контейнера */
+}
+
+#home img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Масштабируем изображение так, чтобы оно заполнило контейнер */
+}
+
+
+@media (max-width: 768px) {
+  #home img {
+    display: none; /* Скрываем изображение на мобильных устройствах */
+  }
+}
+
 section {
   margin: 0 auto;
   max-width: 1400px;
