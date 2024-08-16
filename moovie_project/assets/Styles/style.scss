@@ -73,28 +73,26 @@ nav ul li a:hover {
 }
 
 main {
-  padding: 20px;
+  // padding: 20px;
   text-align: center;
   flex: 1;
 }
 
 // для картинки //
 #home {
-  position: relative;
+  // position: relative;
   width: 100%;
-  padding-top: calc(776 / 7328 * 100%); /* Соотношение сторон */
-  overflow: hidden;
+  // padding-top: calc(776 / 7328 * 100%); /* Соотношение сторон */
+  // overflow: hidden;
 }
 
 #home img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  // object-fit: cover;
 }
-
 
 @media (max-width: 768px) {
   #home img {
@@ -583,7 +581,7 @@ footer {
   z-index: 0; /* Позволяет фону находиться позади содержимого */
 }
 
-.LOTR_logo{
+.LOTR_logo {
   max-width: 750px;
 }
 
@@ -597,7 +595,7 @@ footer {
   text-align: center;
 }
 
-.books-all{
+.books-all {
   margin-top: 50px;
 }
 
@@ -643,7 +641,8 @@ footer {
   height: 100%;
 }
 
-.books-swiper, .movies-swiper {
+.books-swiper,
+.movies-swiper {
   width: 850px;
   margin: 0 auto;
   position: relative;
@@ -714,16 +713,17 @@ footer {
     margin: 0 auto;
   }
   .LOTR_logo {
-    width: 100%; 
-    height: auto; 
-    display: block; 
-    margin: 0 auto; 
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
-  #journey-title, #cards-title {
+  #journey-title,
+  #cards-title {
     font-size: 16px;
-    display: block; 
-    margin: 0 auto; 
-    text-align: center; 
+    display: block;
+    margin: 0 auto;
+    text-align: center;
   }
   #character-container {
     font-size: 14px;
@@ -732,7 +732,7 @@ footer {
     width: 120px;
     height: 2.5rem;
   }
- .books-all {
+  .books-all {
     margin-top: 30px;
   }
 }
@@ -752,7 +752,8 @@ footer {
     display: block;
     margin: 0 auto;
   }
-  #journey-title, #cards-title {
+  #journey-title,
+  #cards-title {
     font-size: 18px;
     display: block;
     margin: 0 auto;
@@ -765,7 +766,7 @@ footer {
     width: 150px;
     height: 3rem;
   }
- .books-all {
+  .books-all {
     margin-top: 40px;
   }
 }
@@ -785,7 +786,8 @@ footer {
     display: block;
     margin: 0 auto;
   }
-  #journey-title, #cards-title {
+  #journey-title,
+  #cards-title {
     font-size: 20px;
     display: block;
     margin: 0 auto;
@@ -798,7 +800,7 @@ footer {
     width: 180px;
     height: 3.5rem;
   }
- .books-all {
+  .books-all {
     margin-top: 50px;
   }
 }
@@ -810,7 +812,7 @@ footer {
   }
   #LOTRlogo__container {
     width: 100%;
-    margin: 0 auto; 
+    margin: 0 auto;
   }
   .LOTR_logo {
     width: 100%;
@@ -818,7 +820,8 @@ footer {
     display: block;
     margin: 0 auto;
   }
-  #journey-title, #cards-title {
+  #journey-title,
+  #cards-title {
     font-size: 22px;
     display: block;
     // margin: 0 auto;
@@ -832,11 +835,10 @@ footer {
     width: 200px;
     height: 4rem;
   }
- .books-all {
+  .books-all {
     margin-top: 60px;
   }
 }
-
 
 // Star Wars
 
