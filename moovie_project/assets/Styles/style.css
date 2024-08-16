@@ -17,7 +17,6 @@ body {
   display: flex;
   flex-direction: column;
   cursor: url("https://cybersoft.ru/uploads/posts/2021-04/thumbs/1618167045_videoshow.png") 0 0, auto; /* Кастомный курсор */
-  overflow-x: hidden;
 }
 
 * {
@@ -181,14 +180,25 @@ footer {
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
-  display: none;
   z-index: 1001;
+}
+
+.hidden {
+  display: none;
 }
 
 .back-to-top:hover {
   background-color: rgb(233, 172, 19);
 }
 
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Кнопка "Back to top" видна на мобильных устройствах */
+  .back-to-top {
+    display: block;
+    bottom: 75px; /* Для мобильных устройств поднять кнопку немного выше */
+  }
+}
 /* Responsive Styles */
 @media (max-width: 768px) {
   .burger-menu {
@@ -579,6 +589,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 #lotr::before {

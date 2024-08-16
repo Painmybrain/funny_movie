@@ -20,7 +20,7 @@ body {
   cursor: url("https://cybersoft.ru/uploads/posts/2021-04/thumbs/1618167045_videoshow.png")
       0 0,
     auto; /* Кастомный курсор */
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 * {
@@ -196,8 +196,11 @@ footer {
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
-  display: block; /* Отображаем кнопку изначально */
   z-index: 1001;
+}
+
+.hidden {
+  display: none;
 }
 
 .back-to-top:hover {
@@ -577,6 +580,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow-x: hidden;
 }
 
 #lotr::before {
