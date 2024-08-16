@@ -183,6 +183,7 @@ const booksWrapper = document.querySelector('.books-swiper-wrapper');
             booksSlide.classList.add('swiper-slide');
 
             const booksImg = document.createElement('img');
+            booksImg.classList.add('book-img');
             booksImg.src = book.image;
             booksImg.alt = book.title;
 
