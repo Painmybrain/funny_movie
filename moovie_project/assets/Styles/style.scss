@@ -82,8 +82,8 @@ main {
 #home {
   position: relative;
   width: 100%;
-  height: var(--image-height, 400px); /* Вы можете регулировать высоту здесь */
-  overflow: hidden; /* Скроем все, что выходит за границы контейнера */
+  padding-top: calc(776 / 7328 * 100%); /* Соотношение сторон */
+  overflow: hidden;
 }
 
 #home img {
@@ -92,7 +92,7 @@ main {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Масштабируем изображение так, чтобы оно заполнило контейнер */
+  object-fit: cover;
 }
 
 
