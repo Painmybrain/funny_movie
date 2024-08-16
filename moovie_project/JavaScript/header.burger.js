@@ -27,26 +27,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Кнопка "Наверх": отображение/скрытие и плавная прокрутка
-  const backToTopButton = document.getElementById('back-to-top');
-
-  const toggleBackToTopButton = () => {
-    if (window.pageYOffset > 300) {
-      backToTopButton.style.display = 'block';
-    } else {
-      backToTopButton.style.display = 'none';
-    }
-  };
-
-  window.addEventListener('scroll', toggleBackToTopButton);
-
-  backToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
+  document.addEventListener('DOMContentLoaded', () => {
+    // Кнопка "Наверх": отображение/скрытие и плавная прокрутка
+    const backToTopButton = document.getElementById('back-to-top');
+  
+    const toggleBackToTopButton = () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.style.display = 'block';
+      } else {
+        backToTopButton.style.display = 'none';
+      }
+    };
+  
+    window.addEventListener('scroll', toggleBackToTopButton);
+  
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
+  
+    // Инициализация видимости кнопки при загрузке страницы
+    toggleBackToTopButton();
   });
-
-  // Инициализация видимости кнопки при загрузке страницы
-  toggleBackToTopButton();
-});
+  
