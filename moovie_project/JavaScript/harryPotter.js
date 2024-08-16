@@ -183,11 +183,13 @@ async function getHarryPotterBooks() {
     // Assuming the data returned has a `books` property
     data.books.forEach((book) => {
       const bookDiv = document.createElement("div");
-      bookDiv.className = "book";
+      bookDiv.className = "HP__book";
       bookDiv.innerHTML = `
+      
               <h2>${book.title}</h2>
               <p><strong>Author:</strong> ${book.author}</p>
               <p><strong>Release Day:</strong> ${book.releaseDay}</p>
+             
           `;
       bookList.appendChild(bookDiv);
     });
