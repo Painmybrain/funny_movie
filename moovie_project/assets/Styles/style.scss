@@ -198,12 +198,21 @@ footer {
   padding: 10px 15px;
   border-radius: 5px;
   cursor: pointer;
-  display: none;
+  display: block; /* Отображаем кнопку изначально */
   z-index: 1001;
 }
 
 .back-to-top:hover {
   background-color: rgb(233, 172, 19);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Кнопка "Back to top" видна на мобильных устройствах */
+  .back-to-top {
+    display: block;
+    bottom: 75px; /* Для мобильных устройств поднять кнопку немного выше */
+  }
 }
 
 /* Responsive Styles */
