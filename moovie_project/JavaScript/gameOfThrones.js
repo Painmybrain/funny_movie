@@ -102,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function () {
 <div class='GOTcard__front'>
 <img class='GOTcard__image' src='${card.url}' alt='Book image'/>
 <div class='GOTcard__text'>
-<p class='GOTcard__p'><b>Year:</b> ${card.year}</p>
+<p class='GOTcard__title'><b>Year:</b> ${card.year}</p>
 </div>
 </div>
 <div class='GOTcard__back'>
