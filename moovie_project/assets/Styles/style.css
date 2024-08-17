@@ -242,6 +242,8 @@ footer {
   margin: 0.3rem;
   max-width: 1350px;
   margin: 0 auto;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
 }
 
 .GOTtvSeries_logoContainer {
@@ -275,7 +277,7 @@ footer {
   align-items: center;
   justify-content: space-between;
   width: 700px;
-  height: 8rem;
+  height: 10rem;
   padding: 1rem;
   margin: 0.5rem;
 }
