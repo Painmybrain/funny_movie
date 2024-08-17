@@ -604,20 +604,20 @@ footer {
 
 /* Властелин колец */
 #lotr {
-  background-image: url("../images/LOTR/1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   width: 100%;
   min-height: 100vh;
   position: relative;
   padding: 20px 0;
   box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.9);
-  display: flex; /* Используем flexbox для выравнивания содержимого */
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
+  background-image: url("../images/LOTR/1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #lotr::before {
@@ -632,7 +632,7 @@ footer {
 }
 
 .LOTR_logo {
-  max-width: 750px;
+  width: 750px;
 }
 
 .lights-wrapper {
@@ -640,6 +640,7 @@ footer {
 }
 
 #LOTRlogo__container {
+  width: 900px;
   z-index: 1; /* Чтобы логотип был виден поверх фона */
   text-align: center;
 }
@@ -656,20 +657,34 @@ footer {
   font-style: normal;
 }
 
+#cards-title {
+  font-size: 18px;
+  display: block;
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+#books-title {
+  margin-top: 36px;
+}
+
 #character-container {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 #lotr__button {
   width: 150px;
-  height: 3rem;
+  height: 50px;
+  padding-bottom: 6px;
+  margin-bottom: 16px;
+  margin-top: 16px;
   font-family: "Bona Nova SC", serif;
   font-weight: 400;
   font-style: normal;
   text-shadow: 2px 2px 1px rgba(113, 113, 113, 0.4588235294), -1px -1px 0 rgb(255, 196, 0);
   color: rgb(85, 85, 85);
   background-color: rgb(233, 172, 19);
-  border-radius: 25px;
+  border-radius: 45px;
   border-color: rgb(198, 116, 1);
   background: linear-gradient(to bottom right, #ff8400, rgba(255, 231, 111, 0.8274509804));
   box-shadow: 0 0 10px rgba(219, 219, 219, 0.7), inset 0 0 20px rgba(255, 153, 0, 0.7);
@@ -690,10 +705,17 @@ footer {
 
 .books-swiper,
 .movies-swiper {
-  width: 850px;
+  width: 827px;
   margin: 0 auto;
   position: relative;
   z-index: 1; /* Задаем z-index, чтобы элементы были видны поверх фона */
+}
+
+.books-swiper {
+  width: 1000px; /* или любое другое значение */
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
 }
 
 .swiper-button-next,
@@ -721,6 +743,11 @@ footer {
   height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.book-img {
+  max-width: 275px;
+  min-height: 400px;
 }
 
 .book-title,
@@ -757,7 +784,7 @@ footer {
     padding: 10px 0;
   }
   #LOTRlogo__container {
-    width: 40%;
+    width: 35%;
     margin: 0 auto;
   }
   .LOTR_logo {
@@ -766,11 +793,22 @@ footer {
     display: block;
     margin: 0 auto;
   }
+  #lotr__button:hover {
+    padding: 8px 10px;
+    border: 2px solid #ffd900;
+  }
   #journey-title,
   #cards-title {
-    font-size: 16px;
     display: block;
     margin: 0 auto;
+    text-align: center;
+  }
+  #journey-title {
+    margin-top: 15px;
+  }
+  #cards-title {
+    width: 35%;
+    margin: 12px auto;
     text-align: center;
   }
   #character-container {
@@ -778,10 +816,28 @@ footer {
   }
   #lotr__button {
     width: 120px;
-    height: 2.5rem;
+    margin-top: 16px;
   }
   .books-all {
     margin-top: 30px;
+  }
+}
+/* Для экранов шириной от 425px и выше */
+@media (min-width: 425px) {
+  #LOTRlogo__container {
+    width: 57%;
+    margin: 0 auto;
+  }
+  .LOTR_logo {
+    width: 70%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  #cards-title {
+    width: 40%;
+    margin: 15px auto;
+    text-align: center;
   }
 }
 /* Для экранов шириной от 426px до 768px */
@@ -794,9 +850,9 @@ footer {
     margin: 0 auto;
   }
   .LOTR_logo {
+    display: block;
     width: 100%;
     height: auto;
-    display: block;
     margin: 0 auto;
   }
   #journey-title,
@@ -806,12 +862,17 @@ footer {
     margin: 0 auto;
     text-align: center;
   }
+  #cards-title {
+    width: 100%;
+    margin: 12px auto;
+    text-align: center;
+  }
   #character-container {
     font-size: 16px;
   }
   #lotr__button {
     width: 150px;
-    height: 3rem;
+    height: 50px;
   }
   .books-all {
     margin-top: 40px;
@@ -839,12 +900,18 @@ footer {
     margin: 0 auto;
     text-align: center;
   }
+  #cards-title {
+    width: 100%;
+    margin: 15px auto;
+    text-align: center;
+  }
   #character-container {
     font-size: 18px;
   }
   #lotr__button {
     width: 180px;
-    height: 3.5rem;
+    height: 50px;
+    margin-top: 16px;
   }
   .books-all {
     margin-top: 50px;
@@ -871,12 +938,18 @@ footer {
     display: block;
     text-align: center;
   }
+  #cards-title {
+    width: 100%;
+    margin: 15px auto;
+    text-align: center;
+  }
   #character-container {
     font-size: 20px;
   }
   #lotr__button {
     width: 200px;
-    height: 4rem;
+    height: 60px;
+    margin-top: 16px;
   }
   .books-all {
     margin-top: 60px;
