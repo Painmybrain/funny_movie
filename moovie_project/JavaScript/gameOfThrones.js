@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   GOTcardsContainer.innerHTML = GOTcardsContent;
 
-  // переворот карточки
+  // Переворот карточки
   const cards = document.querySelectorAll(".GOTcard");
 
   cards.forEach((card) => {

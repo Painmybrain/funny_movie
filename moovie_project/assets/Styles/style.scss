@@ -268,13 +268,10 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: goldenrod;
+  color: wheat;
   padding: 0.3rem;
-  margin: 0.3rem;
   max-width: 1350px;
-  margin: 0 auto;
-  margin-bottom: 3rem;
-  margin-top: 2rem;
+  margin: 2rem auto 3rem;
 }
 .GOTtvSeries_logoContainer {
   width: 45rem;
@@ -289,7 +286,7 @@ footer {
 .GOT_winter {
   font-family: "Trajan Pro", serif;
   font-size: 3rem;
-  // color: goldenrod;
+  color: goldenrod;
   letter-spacing: 2px;
   text-align: center;
   margin-top: 2rem;
@@ -310,7 +307,7 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 700px;
+  width: 55rem;
   height: 12rem;
   padding: 1rem;
   margin: 0.5rem;
@@ -416,6 +413,7 @@ footer {
 .GOTcard.flipped .GOTcard__back {
   transform: rotateY(0deg); //Поднимаем заднюю сторону
 }
+
 // сериал игра престолов
 #GOTtvSeries__container {
   display: flex;
@@ -427,12 +425,12 @@ footer {
   margin-bottom: 0.5rem;
 }
 .GOT__a {
-  color: goldenrod;
+  color: wheat;
   text-decoration: none;
   font-size: 1.2rem;
 }
 .GOT__a:hover {
-  color: whitesmoke;
+  color: goldenrod;
 }
 .GOTtvSeries__box {
   display: flex;
@@ -505,12 +503,12 @@ footer {
 }
 .GOTchar_img,
 .GOTcharDownload {
-  height: 300px;
+  height: 18.75;
   border: 2px solid goldenrod;
   border-radius: 10px;
 }
 .GOTcharDownload {
-  width: 200px;
+  width: 12.5;
   display: flex;
 }
 .GOTchar_p {
@@ -519,6 +517,197 @@ footer {
 }
 .GOTchar_text {
   margin: 1.5rem;
+}
+//адаптив игры престолов
+@media (max-width: 1024px) {
+  // Цитаты
+  #gameofthones {
+    margin: 1.8rem auto 2.8rem;
+  }
+  .GOTtvSeries_logoContainer {
+    width: 42rem;
+  }
+  .GOT_winter {
+    font-size: 2.5rem;
+  }
+  .GOT_h3 {
+    font-size: 1.5rem;
+  }
+  // карточки по книгам игра престолов
+  #GOTcards__container {
+    gap: 1rem;
+  }
+  .GOTcard {
+    width: 18rem;
+    height: 29.5rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .GOTcard__title {
+    font-size: 1.2rem;
+  }
+  .GOTcard__p {
+    font-size: 0.79rem;
+  }
+  // сериал игра престолов
+  #GOTtvSeries__container {
+    gap: 1rem;
+  }
+  .GOTtvSeries__box {
+    width: 18rem;
+    height: 27rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .GOTtvSeries__title {
+    font-size: 1.2rem;
+  }
+  .GOTtvSeries__p {
+    font-size: 0.65rem;
+  }
+  //персонажи игра престолов
+  #GOT__characters__mainContainer {
+    margin-bottom: 1.5rem;
+  }
+  .GOTcharDownload {
+    width: 200px;
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  #gameofthones {
+    margin: 1.6rem auto 2.6rem;
+  }
+  .GOTtvSeries_logoContainer {
+    width: 38rem;
+  }
+  .GOT_winter {
+    font-size: 2.2rem;
+  }
+  .GOT_h3 {
+    font-size: 1.4rem;
+  }
+  .GOT__quotes {
+    width: 45rem;
+  }
+  // карточки по книгам игра престолов
+  .GOTcard {
+    width: 18rem;
+    height: 29rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .GOTcard__title {
+    font-size: 1rem;
+  }
+  .GOTcard__p {
+    font-size: 0.79rem;
+  }
+  // сериал игра престолов
+  #GOTtvSeries__container {
+    gap: 1rem;
+  }
+  .GOTtvSeries__box {
+    width: 18rem;
+    height: 26.4rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .GOTtvSeries__title {
+    font-size: 1rem;
+  }
+  .GOTtvSeries__p {
+    font-size: 0.64rem;
+  }
+  //персонажи игра престолов
+  #GOT__characters__mainContainer {
+    margin-bottom: 1.3rem;
+  }
+  .GOTcharDownload {
+    width: 200px;
+    display: flex;
+  }
+}
+@media (max-width: 425px) {
+  #GOTcards__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  #gameofthones {
+    margin: 1rem auto 2rem;
+  }
+  .GOTtvSeries_logoContainer {
+    width: 30rem;
+  }
+  .GOT_winter {
+    font-size: 1.7rem;
+  }
+  .GOT_h3 {
+    font-size: 1.2rem;
+  }
+  .GOT__quotes {
+    width: 25rem;
+    height: 11rem;
+  }
+  .GOTquote__sentence {
+    margin-bottom: 0.3rem;
+    font-size: 0.9rem;
+  }
+  .GOTquote__character {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+  }
+  .GOT__buttons__style {
+    font-size: 0.9rem;
+  }
+  // карточки по книгам игра престолов
+  .GOTcard {
+    width: 18rem;
+    height: 28rem;
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+  }
+  .GOTcard__title {
+    font-size: 0.9rem;
+  }
+  .GOTcard__p {
+    font-size: 0.79rem;
+  }
+  // сериал игра престолов
+  #GOTtvSeries__container {
+    gap: 0.5rem;
+  }
+  .GOTtvSeries__box {
+    width: 18rem;
+    height: 25.6rem;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+  }
+  .GOTtvSeries__title {
+    font-size: 0.9rem;
+  }
+  .GOTtvSeries__p {
+    font-size: 0.63rem;
+  }
+  //персонажи игра престолов
+  .GOTchar_img,
+  .GOTcharDownload {
+    max-width: 26rem;
+    height: 17rem;
+  }
+  .GOTcharDownload {
+    width: 26rem;
+    display: flex;
+  }
+  .GOTchar_p {
+    font-size: 0.9rem;
+    padding: 0.3rem;
+  }
+  .GOTchar_text {
+    margin: 1rem;
+  }
 }
 
 // harryPotter
