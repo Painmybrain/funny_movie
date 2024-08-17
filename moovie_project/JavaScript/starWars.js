@@ -180,10 +180,10 @@ async function getSwMovies() {
     data.results.forEach(result => {
       const movieCont = document.createElement('div');
       movieCont.className = 'sw_movie_card';
-      movieCont.innerHTML = `      
+      movieCont.innerHTML = `            
       <h2 class="sw_card_title">${result.title}</h2>
-      <p>Director: ${result.director}</p>
-      <p>Release Date: ${result.release_date}</p>`;
+      <p class = "sw_card_dir">Director: ${result.director}</p>
+      <p class = "sw_card_release">Release Date: ${result.release_date}</p>`;
       movieList.appendChild(movieCont)  
 })
   } catch (error) {

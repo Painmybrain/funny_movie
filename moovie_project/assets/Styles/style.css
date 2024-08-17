@@ -974,6 +974,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
   padding-top: 5rem;
   padding-bottom: 3rem;
   min-height: 50rem;
@@ -1029,15 +1030,17 @@ footer {
   padding: 1rem;
   margin: 0.5rem;
   margin-top: 5rem;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .sw_quotes__author {
+  margin-top: 15px;
   margin-left: auto;
   font-style: italic;
 }
 
 .sw_quotes__btn {
+  margin-top: 20px;
   cursor: pointer;
   border: none;
   padding: 10px 25px;
@@ -1067,8 +1070,13 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2rem;
   padding: 3rem;
   min-height: 50rem;
+  background-image: url(../images/SW/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   border: 1px solid rgb(219, 201, 34);
   font-family: "Didact Gothic", sans-serif;
   font-weight: 400;
@@ -1076,49 +1084,38 @@ footer {
 }
 
 .sw_movies__title {
+  align-self: flex-start;
+  margin: 0;
   padding: 20px;
-  max-width: 700px;
+  max-width: 650px;
   text-align: left;
   font-size: 35px;
   color: #358aeb;
-}
-
-.sw_movies__img-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.sw_movies__img_cont {
-  max-height: 600px;
-  max-width: 200px;
-  border: 1px solid rgb(219, 201, 34);
-}
-
-.sw_movies__img {
-  width: 100%;
 }
 
 .sw_card__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-self: flex-start;
   gap: 10px;
+  margin-top: 100px;
+  max-width: 700px;
 }
 
 .sw_movie_card {
   padding: 20px;
   height: 450px;
-  width: 220px;
+  width: 205px;
   border: 1px solid rgb(219, 201, 34);
-  background-size: contain;
+  background-color: #000000;
+  background-size: 200px 300px;
   background-repeat: no-repeat;
   background-position: top center;
 }
 
 .sw_movie_card:nth-child(1) {
-  background-image: url(../images/SW/ep4.jpg);
+  background-image: url(../images/SW/ep_4-2.webp);
 }
 
 .sw_movie_card:nth-child(2) {
@@ -1142,7 +1139,16 @@ footer {
 }
 
 .sw_card_title {
-  margin-top: 320px;
+  margin-top: 310px;
+  font-size: 17px;
+}
+
+.sw_card_dir {
+  font-size: 14px;
+}
+
+.sw_card_release {
+  font-size: 14px;
 }
 
 .sw_movies__btn-back {
