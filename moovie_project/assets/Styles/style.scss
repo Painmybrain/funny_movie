@@ -93,10 +93,68 @@ main {
   width: 100%;
   // object-fit: cover;
 }
+.header__text {
+  font-family: "Trajan Pro", serif;
+  color: goldenrod;
+  margin-bottom: 3rem;
+  padding: 0.5rem;
+}
 
+.header__title {
+  font-size: 5.3rem;
+  transition: color 0.5s;
+}
+
+.header__p {
+  font-size: 1.5rem;
+  transition: color 0.5s;
+}
+
+/* Эффект мерцания */
+.header__title:hover,
+.header__p:hover {
+  animation: shimmer 1s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    color: goldenrod;
+  }
+  50% {
+    color: gold; /* Цвет мерцания */
+  }
+  100% {
+    color: goldenrod;
+  }
+}
+@media (max-width: 1024px) {
+  .header__title {
+    font-size: 5.1rem;
+  }
+
+  .header__p {
+    font-size: 1.3rem;
+  }
+}
 @media (max-width: 768px) {
   #home img {
     display: none; /* Скрываем изображение на мобильных устройствах */
+  }
+  .header__title {
+    font-size: 5rem;
+  }
+
+  .header__p {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 425px) {
+  .header__title {
+    font-size: 3.8rem;
+  }
+
+  .header__p {
+    font-size: 0.8rem;
   }
 }
 
@@ -209,15 +267,6 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-  /* Кнопка "Back to top" видна на мобильных устройствах */
-  .back-to-top {
-    display: block;
-    bottom: 75px; /* Для мобильных устройств поднять кнопку немного выше */
-  }
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
   .burger-menu {
     display: flex; /* Показываем бургер-меню только на мобильных устройствах */
     margin-left: 20px;
@@ -250,7 +299,7 @@ footer {
   /* Кнопка "Back to top" видна на мобильных устройствах */
   .back-to-top {
     display: block;
-    bottom: 75px; /* Для мобильных устройств поднять кнопку немного выше */
+    // bottom: 75px; /* Для мобильных устройств поднять кнопку немного выше */
   }
 }
 
@@ -290,6 +339,10 @@ footer {
   letter-spacing: 2px;
   text-align: center;
   margin-top: 2rem;
+  transition: color 0.5s;
+}
+.GOT_winter:hover {
+  animation: shimmer 1s infinite;
 }
 .GOT_h3 {
   font-size: 1.7rem;
@@ -503,7 +556,7 @@ footer {
 }
 .GOTchar_img,
 .GOTcharDownload {
-  height: 18.75;
+  height: 18.75rem;
   border: 2px solid goldenrod;
   border-radius: 10px;
 }
@@ -722,8 +775,8 @@ footer {
   justify-content: center;
   padding-bottom: 40px;
 }
-#HPLogo__container{
-width:100%;
+#HPLogo__container {
+  width: 100%;
 }
 
 #HP__quote {
@@ -805,8 +858,8 @@ width:100%;
 #harry-potter {
   background-image: url("../images/HP/HP_walpaper.jpg");
 }
-@media (max-width: 768px){
-  .HPLogo{
+@media (max-width: 768px) {
+  .HPLogo {
     width: 85%;
   }
 }
@@ -1348,7 +1401,6 @@ $logo-width: 18em;
 
 .sw_movie_card:nth-child(1) {
   background-image: url(../images/SW/ep_4-2.webp);
-   
 }
 
 .sw_movie_card:nth-child(2) {
@@ -1457,7 +1509,7 @@ $logo-width: 18em;
     font-size: 21px;
   }
 
-  .sw_card__container {    
+  .sw_card__container {
     justify-content: center;
   }
 
