@@ -1403,4 +1403,27 @@ footer {
     width: 18em;
     margin: 0 -9em 0 -9em;
   }
+}
+@media (max-width: 720px) {
+  .sw_btn_next__container {
+    max-width: 600px;
+    padding: 15px;
+  }
+  .sw_btn_next {
+    padding: 20px 35px;
+    font-size: 30px;
+  }
+}
+@media (max-width: 537px) {
+  .sw_movies__title {
+    padding: 5px;
+    font-size: 21px;
+  }
+  .sw_card__container {
+    justify-content: center;
+  }
+  #star-wars-movies {
+    background-size: cover;
+    background-position: top right;
+  }
 }/*# sourceMappingURL=style.css.map */
