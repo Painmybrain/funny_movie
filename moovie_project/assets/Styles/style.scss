@@ -722,6 +722,9 @@ footer {
   justify-content: center;
   padding-bottom: 40px;
 }
+#HPLogo__container{
+width:100%;
+}
 
 #HP__quote {
   font-size: 11pt;
@@ -802,7 +805,11 @@ footer {
 #harry-potter {
   background-image: url("../images/HP/HP_walpaper.jpg");
 }
-
+@media (max-width: 768px){
+  .HPLogo{
+    width: 85%;
+  }
+}
 /* Властелин колец */
 #lotr {
   width: 100%;
